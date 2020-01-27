@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<Dialogbaustein ID="bzinke/13.05.2005/09:56/57072">
+  <Name>DB_ZVK_06_001_01_eva</Name>
+  <TOAnwendung ID="bzinke/13.05.2005/09:54/57016"/>
+  <KarteikarteList>
+    <Karteikarte>
+      <Name>DB_ZVK_06_001_01_eva_auskunft_vorbereiten</Name>
+      <Beschriftung>DB_ZVK_06_001_01_eva_auskunft_vorbereiten</Beschriftung>
+      <GruppeList>
+        <Gruppe ID="bzinke/18.05.2005/12:53/57707">
+          <Name>Gericht</Name>
+          <Beschriftung>Gericht</Beschriftung>
+          <Gruppentyp>
+            <Feldgruppe>
+              <FeldList>
+                <Feld>
+                  <Name>nummer</Name>
+                  <Beschriftung>Nummer</Beschriftung>
+                  <Feldtyp>
+                    <TextfeldEinzeilig>
+                      <Spalten>10</Spalten>
+                      <Ausrichtung>
+                        <Linksbuendig/>
+                      </Ausrichtung>
+                    </TextfeldEinzeilig>
+                  </Feldtyp>
+                  <TOZugriff ID="/evaBearbeitendesGerichtPflichtRolleZvk/partner"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.plf.par.GerichtTO.nummer"/>
+                  <Anzeige>true</Anzeige>
+                  <HilfeText><![CDATA[Adresse des Familiengerichts. Die Eingabe und Änderung von Adressdaten eines Familiengerichts erfolgt über den entsprechenden Stammdatengeschäftsvorfall; GV_PLF_11_015F = Eingabe, GV_PLF_11_025F = Änderung.]]></HilfeText>
+                </Feld>
+                <Feld>
+                  <Name>nameAnzeige</Name>
+                  <Beschriftung>Name</Beschriftung>
+                  <LabelTooltip>Name</LabelTooltip>
+                  <Feldtyp>
+                    <TextfeldEinzeilig>
+                      <Spalten>20</Spalten>
+                      <Ausrichtung>
+                        <Linksbuendig/>
+                      </Ausrichtung>
+                    </TextfeldEinzeilig>
+                  </Feldtyp>
+                  <TOZugriff ID="/evaBearbeitendesGerichtPflichtRolleZvk/partner"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.plf.par.GerichtTO.nameAnzeige"/>
+                  <Anzeige>true</Anzeige>
+                </Feld>
+              </FeldList>
+              <TOZugriff ID="/evaBearbeitendesGerichtPflichtRolleZvk/partner"/>
+              <Spalten>4</Spalten>
+              <Suchoption>
+                <OhneSuche/>
+              </Suchoption>
+            </Feldgruppe>
+          </Gruppentyp>
+          <Umbruch>true</Umbruch>
+        </Gruppe>
+        <Gruppe ID="bzinke/13.05.2005/10:17/58306">
+          <Name>DB_ZVK_06_001_01_eva_auskunft_vorbereiten1</Name>
+          <Beschriftung>Eheversorgungsfall</Beschriftung>
+          <Gruppentyp>
+            <Feldgruppe>
+              <FeldList>
+                <Feld>
+                  <Name>verfahrensart</Name>
+                  <Beschriftung>Verfahrensart</Beschriftung>
+                  <LabelTooltip>Verfahrensart</LabelTooltip>
+                  <Feldtyp>
+                    <Combobox>
+                    </Combobox>
+                  </Feldtyp>
+                  <TOZugriff ID="/"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.EheversorgungsausgleichZvkTO.verfahrensart"/>
+                  <Anzeige>true</Anzeige>
+                  <HilfeText><![CDATA[Der Sachbearbeiter muss hier das vorbelegte 1. Realteilung in 2. Quasisplitting ändern, falls der EVA-Fall nach dem analogen Quasisplitting Verfahren abgewickelt wird.]]></HilfeText>
+                </Feld>
+                <Feld>
+                  <Name>statusNach</Name>
+                  <Beschriftung>Status</Beschriftung>
+                  <Feldtyp>
+                    <Combobox>
+                    </Combobox>
+                  </Feldtyp>
+                  <TOZugriff ID="/"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.EheversorgungsausgleichZvkTO.statusNach"/>
+                  <Anzeige>true</Anzeige>
+                </Feld>
+                <Feld>
+                  <Name>aktenzeichen</Name>
+                  <Beschriftung>Geschäftsnummer</Beschriftung>
+                  <LabelTooltip>Geschäftsnummer</LabelTooltip>
+                  <Feldtyp>
+                    <TextfeldEinzeilig>
+                      <Spalten>15</Spalten>
+                      <Ausrichtung>
+                        <Linksbuendig/>
+                      </Ausrichtung>
+                    </TextfeldEinzeilig>
+                  </Feldtyp>
+                  <TOZugriff ID="/"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.EheversorgungsausgleichZvkTO.aktenzeichen"/>
+                  <Anzeige>true</Anzeige>
+                  <HilfeText><![CDATA[Geschäftsnummer des Eheversorgungsfalles beim Familiengericht.]]></HilfeText>
+                </Feld>
+                <Feld>
+                  <Name>datumAuskunftsersuchen</Name>
+                  <Beschriftung>Datum Auskunftsersuchen</Beschriftung>
+                  <LabelTooltip>Datum Auskunftsersuchen</LabelTooltip>
+                  <Feldtyp>
+                    <TextfeldEinzeilig>
+                      <Spalten>10</Spalten>
+                      <Format ID="Datumsformat"/>
+                      <Ausrichtung>
+                        <Linksbuendig/>
+                      </Ausrichtung>
+                    </TextfeldEinzeilig>
+                  </Feldtyp>
+                  <TOZugriff ID="/"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.EheversorgungsausgleichZvkTO.datumAuskunftsersuchen"/>
+                  <Anzeige>true</Anzeige>
+                  <HilfeText><![CDATA[Datum des Auskunftsersuchens des Familiengerichts.]]></HilfeText>
+                </Feld>
+                <Feld>
+                  <Name>beginnEhe</Name>
+                  <Beschriftung>Ehebeginn</Beschriftung>
+                  <LabelTooltip>Ehebeginn</LabelTooltip>
+                  <Feldtyp>
+                    <TextfeldEinzeilig>
+                      <Spalten>10</Spalten>
+                      <Format ID="Datumsformat"/>
+                      <Ausrichtung>
+                        <Linksbuendig/>
+                      </Ausrichtung>
+                    </TextfeldEinzeilig>
+                  </Feldtyp>
+                  <TOZugriff ID="/"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.EheversorgungsausgleichZvkTO.beginnEhe"/>
+                  <Anzeige>true</Anzeige>
+                  <HilfeText><![CDATA[Beginn der Ehezeit aus dem Auskunftsersuchen des Familiengerichts.]]></HilfeText>
+                </Feld>
+                <Feld>
+                  <Name>endeEhe</Name>
+                  <Beschriftung>Eheende</Beschriftung>
+                  <LabelTooltip>Eheende</LabelTooltip>
+                  <Feldtyp>
+                    <TextfeldEinzeilig>
+                      <Spalten>10</Spalten>
+                      <Format ID="Datumsformat"/>
+                      <Ausrichtung>
+                        <Linksbuendig/>
+                      </Ausrichtung>
+                    </TextfeldEinzeilig>
+                  </Feldtyp>
+                  <TOZugriff ID="/"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.EheversorgungsausgleichZvkTO.endeEhe"/>
+                  <Anzeige>true</Anzeige>
+                  <HilfeText><![CDATA[Ende der Ehezeit aus dem Auskunftsersuchen des Familiengerichts.]]></HilfeText>
+                </Feld>
+                <Feld>
+                  <Name>artAnrecht</Name>
+                  <Beschriftung>Anrechtsart</Beschriftung>
+                  <LabelTooltip>Anrechtsart</LabelTooltip>
+                  <Feldtyp>
+                    <Combobox>
+                    </Combobox>
+                  </Feldtyp>
+                  <TOZugriff ID="/"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.EheversorgungsausgleichZvkTO.artAnrecht"/>
+                  <Anzeige>true</Anzeige>
+                  <HilfeText><![CDATA[Art des Anrechts und der Leistungssteigerung]]></HilfeText>
+                </Feld>
+                <Feld>
+                  <Name>dummy</Name>
+                  <Anzeige>true</Anzeige>
+                </Feld>
+              </FeldList>
+              <TOZugriff ID="/"/>
+              <Spalten>4</Spalten>
+            </Feldgruppe>
+          </Gruppentyp>
+          <Umbruch>true</Umbruch>
+        </Gruppe>
+        <Gruppe ID="bzinke/17.05.2005/11:15/58053">
+          <Name>Pflichtversich</Name>
+          <Beschriftung>Pflichtversicherung</Beschriftung>
+          <Gruppentyp>
+            <Feldgruppe>
+              <FeldList>
+                <Feld>
+                  <Name>auskunftArt</Name>
+                  <Beschriftung>Status Pflichtversicherung</Beschriftung>
+                  <LabelTooltip>Status Pflichtversicherung</LabelTooltip>
+                  <Feldtyp>
+                    <Combobox>
+                    </Combobox>
+                  </Feldtyp>
+                  <TOZugriff ID="/"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.EheversorgungsausgleichZvkTO.auskunftArt"/>
+                  <Anzeige>true</Anzeige>
+                  <HilfeText><![CDATA[Zweck: Das Kennzeichen steuert die Berechnung (Tabelle 1 oder 7 der BarwertVO) und die Auswahl von Variablen für Druckstücke.
+
+Das EVA Statuskennzeichen bestimmt den weiteren Fortgang des Verfahrens für die Pflichtversicherung und gegebenenfalls die Auswahl der Druckstücke für die Sendung. Durch Plausibilitätsprüfungen wird der Sachbearbeiter hier geführt!
+
+Die Ziffer 5 wird nur dann angezeigt werden, wenn es sich um eine echte Überleitung aller in der Ehezeit erworbenen Anrechte handelt.
+
+
+
+Vorbelegung im GV_ZVK_06_002F durch den berechneten Wert aus GV_ZVK_06_001F Versicherter EVA Auskunft vorbereiten.]]></HilfeText>
+                </Feld>
+                <Feld>
+                  <Name>anrechtArt</Name>
+                  <Beschriftung>Anrechtsart Pflicht</Beschriftung>
+                  <LabelTooltip>Anrechtsart Pflichtversicherung</LabelTooltip>
+                  <Feldtyp>
+                    <Combobox>
+                    </Combobox>
+                  </Feldtyp>
+                  <TOZugriff ID="/"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.EheversorgungsausgleichZvkTO.anrechtArt"/>
+                  <Anzeige>true</Anzeige>
+                  <HilfeText><![CDATA[Das Kennzeichen gibt an, um was für ein Anrecht es sich handelt.
+
+
+
+Vorbelegung im GV_ZVK_06_002F durch den berechneten Wert aus GV_ZVK_06_001F Versicherter EVA Auskunft vorbereiten.]]></HilfeText>
+                </Feld>
+                <Feld>
+                  <Name>berechnAuskunftPflicht</Name>
+                  <Beschriftung>Berechnungsmethode</Beschriftung>
+                  <LabelTooltip>Berechnungsmethode</LabelTooltip>
+                  <Feldtyp>
+                    <Combobox>
+                    </Combobox>
+                  </Feldtyp>
+                  <TOZugriff ID="/"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.EheversorgungsausgleichZvkTO.berechnAuskunftPflicht"/>
+                  <Anzeige>true</Anzeige>
+                </Feld>
+                <Feld>
+                  <Name>berechnAnrechtPflicht</Name>
+                  <Beschriftung>Berechnungskennzeichen</Beschriftung>
+                  <LabelTooltip>Berechnungskennzeichen</LabelTooltip>
+                  <Feldtyp>
+                    <Combobox>
+                    </Combobox>
+                  </Feldtyp>
+                  <TOZugriff ID="/"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.EheversorgungsausgleichZvkTO.berechnAnrechtPflicht"/>
+                  <Anzeige>true</Anzeige>
+                  <HilfeText><![CDATA[Die Methode der Berechnung der während der Ehezeit erworbenen Anrechte richtet sich nach dem Datum des Endes der Ehe. Zur Vereinfachung nachfolgender Berechnungen wird daher hier ein Berechnungskennzeichen für die unterschiedlichen Berechnungsarten gesetzt. Abhängig von diesem Berechnungskennzeichen werden in folgenden Geschäftsvorfällen die Anrechte berechnet.]]></HilfeText>
+                </Feld>
+              </FeldList>
+              <TOZugriff ID="/"/>
+              <Spalten>2</Spalten>
+            </Feldgruppe>
+          </Gruppentyp>
+          <Umbruch>true</Umbruch>
+        </Gruppe>
+        <Gruppe ID="bzinke/17.05.2005/11:15/58055">
+          <Name>Freiw</Name>
+          <Beschriftung>Freiwillige Versicherung</Beschriftung>
+          <Gruppentyp>
+            <Feldgruppe>
+              <FeldList>
+                <Feld>
+                  <Name>auskunftArtZusatz</Name>
+                  <Beschriftung>Status freiwillige Versicherung</Beschriftung>
+                  <LabelTooltip>Status freiwillige Versicherung</LabelTooltip>
+                  <Feldtyp>
+                    <Combobox>
+                    </Combobox>
+                  </Feldtyp>
+                  <TOZugriff ID="/"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.EheversorgungsausgleichZvkTO.auskunftArtZusatz"/>
+                  <Anzeige>true</Anzeige>
+                  <HilfeText><![CDATA[Das EVA Statuskennzeichen bestimmt den weiteren Fortgang des Verfahrens für die freiwillige Versicherung und gegebenenfalls die Auswahl der Druckstücke für die Sendung. Durch Plausibili-tätsprüfungen wird der Sachbearbeiter hier geführt!]]></HilfeText>
+                </Feld>
+                <Feld>
+                  <Name>anrechtArtZusatz</Name>
+                  <Beschriftung>Anrechtsart freiw. Vers.</Beschriftung>
+                  <LabelTooltip>Anrechtsart freiwillige Versicherung</LabelTooltip>
+                  <Feldtyp>
+                    <Combobox>
+                    </Combobox>
+                  </Feldtyp>
+                  <TOZugriff ID="/"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.EheversorgungsausgleichZvkTO.anrechtArtZusatz"/>
+                  <Anzeige>true</Anzeige>
+                  <HilfeText><![CDATA[Das Kennzeichen gibt an, um was für ein Anrecht es sich handelt.]]></HilfeText>
+                </Feld>
+              </FeldList>
+              <TOZugriff ID="/"/>
+              <Spalten>2</Spalten>
+            </Feldgruppe>
+          </Gruppentyp>
+          <Umbruch>true</Umbruch>
+        </Gruppe>
+      </GruppeList>
+    </Karteikarte>
+  </KarteikarteList>
+  <Dokumentation>
+    <ErzeugtVon>bzinke</ErzeugtVon>
+    <Erzeugungsdatum>13.05.2005/10:43</Erzeugungsdatum>
+  </Dokumentation>
+</Dialogbaustein>

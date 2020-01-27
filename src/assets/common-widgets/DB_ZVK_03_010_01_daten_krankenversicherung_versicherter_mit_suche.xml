@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<Dialogbaustein ID="schall/24.05.2004/11:55/169924">
+  <Name>DB_ZVK_03_010_01_daten_krankenversicherung_versicherter_mit_suche</Name>
+  <TOAnwendung ID="schall/24.05.2004/11:44/164810"/>
+  <KarteikarteList>
+    <Karteikarte>
+      <Name>Dummy-Karte</Name>
+      <Beschriftung>Dummy-Karte</Beschriftung>
+      <GruppeList>
+        <Gruppe ID="schall/24.05.2004/11:55/170011">
+          <Name>Krankenversicherung</Name>
+          <Beschriftung>Krankenversicherung</Beschriftung>
+          <Gruppentyp>
+            <Feldgruppe>
+              <FeldList>
+                <Feld>
+                  <Name>krankenversart</Name>
+                  <Beschriftung>Art</Beschriftung>
+                  <LabelTooltip>Art der Krankenversicherung</LabelTooltip>
+                  <Feldtyp>
+                    <Combobox>
+                    </Combobox>
+                  </Feldtyp>
+                  <TOZugriff ID="/"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.RenteZvkTO.krankenversicherungsart"/>
+                  <Anzeige>true</Anzeige>
+                  <Bearbeitbar>true</Bearbeitbar>
+                  <Mussfeld>true</Mussfeld>
+                  <HilfeText><![CDATA[Die Ausprägung der Krankenversicherungsart:
+- gesetzlich
+- privat
+- Sonstige
+]]></HilfeText>
+                </Feld>
+              </FeldList>
+              <TOZugriff ID="/"/>
+              <Spalten>4</Spalten>
+            </Feldgruppe>
+          </Gruppentyp>
+          <Umbruch>true</Umbruch>
+        </Gruppe>
+        <Gruppe ID="schall/24.05.2004/11:55/170205">
+          <Name>Formblatt_zur_KV_und_PV</Name>
+          <Beschriftung>Formblatt zur KV und PV</Beschriftung>
+          <Gruppentyp>
+            <Feldgruppe>
+              <FeldList>
+                <Feld>
+                  <Name>krkNameAnzeige</Name>
+                  <Beschriftung>Name/Krk.</Beschriftung>
+                  <LabelTooltip>Name der Krankenkasse</LabelTooltip>
+                  <Feldtyp>
+                    <TextfeldEinzeilig>
+                      <Spalten>20</Spalten>
+                      <Ausrichtung>
+                        <Linksbuendig/>
+                      </Ausrichtung>
+                    </TextfeldEinzeilig>
+                  </Feldtyp>
+                  <TOZugriff ID="/pflichtRolle/partner/krankenkasse/krankenkasse"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.plf.par.KrankenkasseTO.nameAnzeige"/>
+                  <Anzeige>true</Anzeige>
+                  <HilfeText><![CDATA[Name der Krankenkasse]]></HilfeText>
+                </Feld>
+                <Feld>
+                  <Name>leer1</Name>
+                  <Anzeige>true</Anzeige>
+                </Feld>
+                <Feld>
+                  <Name>beitragsabzug</Name>
+                  <Beschriftung>Abzuführ. Beiträge</Beschriftung>
+                  <LabelTooltip>Sind Beiträge zur KvdR und PflV abzuführen?</LabelTooltip>
+                  <Feldtyp>
+                    <Combobox>
+                      <Filterklasse>ch.forumedia.futura.client.zvk.vtg.KVAbzugsartCodeFilter</Filterklasse>
+                    </Combobox>
+                  </Feldtyp>
+                  <TOZugriff ID="/pflichtRolle/partner/krankenkasse"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.plf.par.KrankenversichertBeiTO.beitragsabzug"/>
+                  <Anzeige>true</Anzeige>
+                  <Bearbeitbar>true</Bearbeitbar>
+                  <HilfeText><![CDATA[Muss bei Krankenversicherung = gesetzlich]]></HilfeText>
+                </Feld>
+                <Feld>
+                  <Name>mehrfachbezugsart</Name>
+                  <Beschriftung>Mehrfachbezug</Beschriftung>
+                  <LabelTooltip>Mehrfachbezug</LabelTooltip>
+                  <Feldtyp>
+                    <Combobox>
+                    </Combobox>
+                  </Feldtyp>
+                  <TOZugriff ID="/pflichtRolle/partner/krankenkasse"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.plf.par.KrankenversichertBeiTO.mehrfachbezugsart"/>
+                  <Anzeige>true</Anzeige>
+                  <Bearbeitbar>true</Bearbeitbar>
+                  <HilfeText><![CDATA[Die Krankenkasse gibt mit diesem Attribut vor, ob die Minimalgrenze zu beachten ist. Diese ist nur zu ignorieren, wenn 'ja' angekreuzt ist.
+
+Muss bei Krankenversicherung = gesetzlich]]></HilfeText>
+                </Feld>
+                <Feld>
+                  <Name>leer2</Name>
+                  <Anzeige>true</Anzeige>
+                </Feld>
+                <Feld>
+                  <Name>veraenderungsmitteilungKnz</Name>
+                  <Beschriftung>Änderungsmitteilung</Beschriftung>
+                  <LabelTooltip>Sollen Änderungsmitteilungen geschickt werden?</LabelTooltip>
+                  <Feldtyp>
+                    <Combobox>
+                    </Combobox>
+                  </Feldtyp>
+                  <TOZugriff ID="/pflichtRolle/partner/krankenkasse"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.plf.par.KrankenversichertBeiTO.veraenderungsmitteilungKnz"/>
+                  <Anzeige>true</Anzeige>
+                  <Bearbeitbar>true</Bearbeitbar>
+                  <Berechnet>true</Berechnet>
+                </Feld>
+                <Feld>
+                  <Name>leer2_1</Name>
+                  <Anzeige>true</Anzeige>
+                </Feld>
+                <Feld>
+                  <Name>leer3</Name>
+                  <Anzeige>true</Anzeige>
+                  <Umbruch>true</Umbruch>
+                </Feld>
+                <Feld>
+                  <Name>AktenzeichenKrK5</Name>
+                  <Beschriftung>Aktenzeichen bei Krk.</Beschriftung>
+                  <Feldtyp>
+                    <TextfeldEinzeilig>
+                      <Spalten>4</Spalten>
+                    </TextfeldEinzeilig>
+                  </Feldtyp>
+                  <TOZugriff ID="/pflichtRolle/partner/krankenkasse"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.plf.par.KrankenversichertBeiTO.aktenzeichenKrk"/>
+                  <Anzeige>true</Anzeige>
+                  <Bearbeitbar>true</Bearbeitbar>
+                </Feld>
+                <Feld>
+                  <Name>leer6</Name>
+                  <Anzeige>true</Anzeige>
+                </Feld>
+                <Feld>
+                  <Name>leer4</Name>
+                  <Anzeige>true</Anzeige>
+                </Feld>
+                <Feld>
+                  <Name>VB-MaxBerechnet</Name>
+                  <Beschriftung>VB-Max Berechnet</Beschriftung>
+                  <LabelTooltip>VB-Max Berechnet</LabelTooltip>
+                  <Feldtyp>
+                    <TextfeldEinzeilig>
+                      <Spalten>8</Spalten>
+                      <Format ID="Geldbetrag-Format"/>
+                      <Ausrichtung>
+                        <Linksbuendig/>
+                      </Ausrichtung>
+                    </TextfeldEinzeilig>
+                  </Feldtyp>
+                  <TOZugriff ID="/pflichtRolle/PK_ZVK_01_692F"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.plf.vtg.BetragswertTO.endbetragBerechnet"/>
+                  <Anzeige>true</Anzeige>
+                  <HilfeText><![CDATA[VB-Max Berechnet]]></HilfeText>
+                </Feld>
+                <Feld>
+                  <Name>VB-MaxEingabe</Name>
+                  <Beschriftung>VB-Max Eingabe</Beschriftung>
+                  <LabelTooltip>Versorgungsbezug-Maximal</LabelTooltip>
+                  <Feldtyp>
+                    <TextfeldEinzeilig>
+                      <Spalten>8</Spalten>
+                      <Format ID="Geldbetrag-Format"/>
+                      <Ausrichtung>
+                        <Linksbuendig/>
+                      </Ausrichtung>
+                    </TextfeldEinzeilig>
+                  </Feldtyp>
+                  <TOZugriff ID="/pflichtRolle/PK_ZVK_01_692F"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.plf.vtg.BetragswertTO.endbetragEingabe"/>
+                  <Anzeige>true</Anzeige>
+                  <Bearbeitbar>true</Bearbeitbar>
+                </Feld>
+                <Feld>
+                  <Name>leer5</Name>
+                  <Anzeige>true</Anzeige>
+                </Feld>
+                <Feld>
+                  <Name>VB-MaxVerwendet</Name>
+                  <Beschriftung>VB-Max Verwendet</Beschriftung>
+                  <LabelTooltip>VB-Max Verwendet</LabelTooltip>
+                  <Feldtyp>
+                    <TextfeldEinzeilig>
+                      <Spalten>8</Spalten>
+                      <Format ID="Geldbetrag-Format"/>
+                      <Ausrichtung>
+                        <Linksbuendig/>
+                      </Ausrichtung>
+                    </TextfeldEinzeilig>
+                  </Feldtyp>
+                  <TOZugriff ID="/pflichtRolle/PK_ZVK_01_692F"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.plf.vtg.BetragswertTO.endbetragVerwendet"/>
+                  <Anzeige>true</Anzeige>
+                  <HilfeText><![CDATA[VB-Max Verwendet]]></HilfeText>
+                </Feld>
+                <Feld>
+                  <Name>anpassungVbMaxDurchZahlstelleKnz</Name>
+                  <Beschriftung>Anpassung VB-Max durch Zahlstelle</Beschriftung>
+                  <LabelTooltip>Anpassung VB-Max durch Zahlstelle</LabelTooltip>
+                  <Feldtyp>
+                    <Checkbox>
+                    </Checkbox>
+                  </Feldtyp>
+                  <TOZugriff ID="/"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.RenteZvkTO.anpassungVbMaxDurchZahlstelleKnz"/>
+                  <Anzeige>true</Anzeige>
+                  <Bearbeitbar>true</Bearbeitbar>
+                  <HilfeText><![CDATA[Anpassung VB-Max durch Zahlstelle]]></HilfeText>
+                </Feld>
+              </FeldList>
+              <TOZugriff ID="/pflichtRolle/partner/krankenkasse/krankenkasse"/>
+              <Spalten>6</Spalten>
+              <FeldgruppenNeuOption>
+                <OhneNeuaufnahme/>
+              </FeldgruppenNeuOption>
+              <FeldgruppenEntfernenOption>
+                <OhneEntfernen/>
+              </FeldgruppenEntfernenOption>
+              <Auskunftsoption>
+                <OhneAuskunft/>
+              </Auskunftsoption>
+              <Suchoption>
+                <MitSuche>
+                  <Basismodel ID="/"/>
+                  <RefSuchdialog ID="ch.forumedia.futura.client.plf.par.DS_PLF_00_005F_Krankenkasse"/>
+                  <SynchSuchkriterienAttribut>nummer</SynchSuchkriterienAttribut>
+                  <SynchTOAttribut>nummer</SynchTOAttribut>
+                  <Integrationsklasse>ch.forumedia.futura.client.zvk.vtg.RenteKrankenkasseTOIntegratorClient</Integrationsklasse>
+                  <Beschriftung>Nummer/Krk.</Beschriftung>
+                  <Spalten>20</Spalten>
+                </MitSuche>
+              </Suchoption>
+            </Feldgruppe>
+          </Gruppentyp>
+          <Umbruch>true</Umbruch>
+        </Gruppe>
+      </GruppeList>
+    </Karteikarte>
+  </KarteikarteList>
+  <Dokumentation>
+  </Dokumentation>
+</Dialogbaustein>

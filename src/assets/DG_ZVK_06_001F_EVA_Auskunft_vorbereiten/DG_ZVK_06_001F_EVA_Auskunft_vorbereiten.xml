@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<Dialogbaustein ID="bzinke/17.05.2005/10:47/58724">
+  <Name>DG_ZVK_06_001F_EVA_Auskunft_vorbereiten</Name>
+  <Batchgenerierung>true</Batchgenerierung>
+  <MappingDateiErzeugen>true</MappingDateiErzeugen>
+  <TOAnwendung ID="bzinke/17.05.2005/10:44/57621"/>
+  <Kopfkarte>true</Kopfkarte>
+  <KarteikarteList>
+    <Karteikarte>
+      <Name>DG_ZVK_06_001F_EVA_Auskunft_vorbereiten</Name>
+      <Beschriftung>DG_ZVK_06_001F_EVA_Auskunft_vorbereiten</Beschriftung>
+      <GruppeList>
+        <Gruppe ID="bzinke/17.05.2005/10:47/58736">
+          <Name>Kopfkarte1</Name>
+          <Beschriftung>Versicherter</Beschriftung>
+          <Gruppentyp>
+            <Feldgruppenimport>
+              <TOZugriff ID="/geVoTransaktion/partner"/>
+              <StandardDBS ID="aschob/08.03.2004/02:03/136829"/>
+              <Gruppe ID="aschob/08.03.2004/02:03/136903"/>
+            </Feldgruppenimport>
+          </Gruppentyp>
+        </Gruppe>
+        <Gruppe ID="bzinke/17.05.2005/11:07/57662">
+          <Name>Stichtag</Name>
+          <Beschriftung>Stichtag</Beschriftung>
+          <Gruppentyp>
+            <Feldgruppe>
+              <FeldList>
+                <Feld>
+                  <Name>stichtag</Name>
+                  <Beschriftung>Ende der Ehe</Beschriftung>
+                  <LabelTooltip>Ende der Ehe</LabelTooltip>
+                  <Feldtyp>
+                    <TextfeldEinzeilig>
+                      <Spalten>10</Spalten>
+                      <Format ID="Datumsformat"/>
+                      <Ausrichtung>
+                        <Linksbuendig/>
+                      </Ausrichtung>
+                    </TextfeldEinzeilig>
+                  </Feldtyp>
+                  <TOZugriff ID="/geVoTransaktion"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.plf.pro.GeVoTransaktionTO.stichtag"/>
+                  <Anzeige>true</Anzeige>
+                </Feld>
+              </FeldList>
+              <TOZugriff ID="/geVoTransaktion"/>
+              <Spalten>2</Spalten>
+            </Feldgruppe>
+          </Gruppentyp>
+          <Umbruch>true</Umbruch>
+        </Gruppe>
+      </GruppeList>
+    </Karteikarte>
+    <Karteikarte>
+      <Name>AuskunftVorbereiten</Name>
+      <Beschriftung>Auskunft vorbereiten</Beschriftung>
+      <GruppeList>
+        <Gruppe ID="bzinke/18.05.2005/04:32/57891">
+          <Name>Gericht4</Name>
+          <Beschriftung>Gericht</Beschriftung>
+          <Gruppentyp>
+            <Feldgruppenimport>
+              <TOZugriff ID="/geVoTransaktion/versorgFall"/>
+              <StandardDBS ID="bzinke/13.05.2005/09:56/57072"/>
+              <Gruppe ID="bzinke/18.05.2005/12:53/57707"/>
+            </Feldgruppenimport>
+          </Gruppentyp>
+          <Umbruch>true</Umbruch>
+        </Gruppe>
+        <Gruppe ID="bzinke/18.05.2005/01:12/58725">
+          <Name>DB_ZVK_06_001_01_eva_auskunft_vorbereiten15</Name>
+          <Beschriftung>Eheversorgungsfall</Beschriftung>
+          <Gruppentyp>
+            <Feldgruppenimport>
+              <TOZugriff ID="/geVoTransaktion/versorgFall"/>
+              <StandardDBS ID="bzinke/13.05.2005/09:56/57072"/>
+              <Gruppe ID="bzinke/13.05.2005/10:17/58306"/>
+              <AktivierungEintragGUIElementList>
+                <AktivierungEintragGUIElement>
+                  <GUIElement>aktenzeichen</GUIElement>
+                  <Wert>MUSS</Wert>
+                </AktivierungEintragGUIElement>
+                <AktivierungEintragGUIElement>
+                  <GUIElement>datumAuskunftsersuchen</GUIElement>
+                  <Wert>MUSS</Wert>
+                </AktivierungEintragGUIElement>
+                <AktivierungEintragGUIElement>
+                  <GUIElement>beginnEhe</GUIElement>
+                  <Wert>MUSS</Wert>
+                </AktivierungEintragGUIElement>
+                <AktivierungEintragGUIElement>
+                  <GUIElement>artAnrecht</GUIElement>
+                  <Wert>MUSS</Wert>
+                </AktivierungEintragGUIElement>
+              </AktivierungEintragGUIElementList>
+            </Feldgruppenimport>
+          </Gruppentyp>
+          <Umbruch>true</Umbruch>
+        </Gruppe>
+        <Gruppe ID="bzinke/18.05.2005/01:12/58727">
+          <Name>Pflichtversich6</Name>
+          <Beschriftung>Pflichtversicherung</Beschriftung>
+          <Gruppentyp>
+            <Feldgruppenimport>
+              <TOZugriff ID="/geVoTransaktion/versorgFall"/>
+              <StandardDBS ID="bzinke/13.05.2005/09:56/57072"/>
+              <Gruppe ID="bzinke/17.05.2005/11:15/58053"/>
+            </Feldgruppenimport>
+          </Gruppentyp>
+          <Umbruch>true</Umbruch>
+        </Gruppe>
+        <Gruppe ID="bzinke/18.05.2005/01:12/58729">
+          <Name>Freiw7</Name>
+          <Beschriftung>Freiwillige Versicherung</Beschriftung>
+          <Gruppentyp>
+            <Feldgruppenimport>
+              <TOZugriff ID="/geVoTransaktion/versorgFall"/>
+              <StandardDBS ID="bzinke/13.05.2005/09:56/57072"/>
+              <Gruppe ID="bzinke/17.05.2005/11:15/58055"/>
+            </Feldgruppenimport>
+          </Gruppentyp>
+          <Umbruch>true</Umbruch>
+        </Gruppe>
+        <Gruppe ID="bzinke/23.05.2005/10:36/58763">
+          <Name>zusatzInfo14</Name>
+          <Beschriftung>Kennzeichen Wartezeit - Eheversorgungsausgleich</Beschriftung>
+          <Gruppentyp>
+            <Feldgruppe>
+              <FeldList>
+                <Feld>
+                  <Name>booleanWert0</Name>
+                  <Beschriftung>Wartezeit erfüllt / erfüllbar</Beschriftung>
+                  <LabelTooltip>Wartezeit ist bereits erfüllt oder noch erfüllbar</LabelTooltip>
+                  <Feldtyp>
+                    <Checkbox>
+                    </Checkbox>
+                  </Feldtyp>
+                  <TOZugriff ID="/geVoTransaktion/versorgFall"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.EheversorgungsausgleichZvkTO.wartezeitErfuellbarKnz"/>
+                  <Anzeige>true</Anzeige>
+                  <Bearbeitbar>true</Bearbeitbar>
+                  <Mussfeld>true</Mussfeld>
+                </Feld>
+                <Feld>
+                  <Name>booleanWert1</Name>
+                  <Beschriftung>Wartezeit gilt als erfüllt</Beschriftung>
+                  <LabelTooltip>Wartezeit erfüllt z.B. wegen Arbeitsunfall</LabelTooltip>
+                  <Feldtyp>
+                    <Checkbox>
+                    </Checkbox>
+                  </Feldtyp>
+                  <TOZugriff ID="/geVoTransaktion/versorgFall"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.EheversorgungsausgleichZvkTO.wartezeitGiltErfuelltKnz"/>
+                  <Anzeige>true</Anzeige>
+                  <Bearbeitbar>true</Bearbeitbar>
+                </Feld>
+              </FeldList>
+              <TOZugriff ID="/zusatzInfo"/>
+              <Spalten>4</Spalten>
+            </Feldgruppe>
+          </Gruppentyp>
+          <Umbruch>true</Umbruch>
+        </Gruppe>
+      </GruppeList>
+    </Karteikarte>
+  </KarteikarteList>
+  <Dokumentation>
+    <ErzeugtVon>bzinke</ErzeugtVon>
+    <Erzeugungsdatum>17.05.2005/10:48</Erzeugungsdatum>
+  </Dokumentation>
+</Dialogbaustein>

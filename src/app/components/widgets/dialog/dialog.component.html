@@ -1,0 +1,13 @@
+<header *ngIf="value.header">
+  <app-group-container [value]="value.header"></app-group-container>
+</header>
+<section *ngIf="value.tabs && value.tabs.length">
+  <nav>
+    <ul class="nav nav-tabs">
+      <li class="nav-item" *ngFor="let tab of value.tabs">
+        <a class="nav-link" routerLinkActive="active" routerLink="{{tab.key}}">{{tab.label}}</a>
+      </li>
+    </ul>
+  </nav>
+  <router-outlet></router-outlet>
+</section>

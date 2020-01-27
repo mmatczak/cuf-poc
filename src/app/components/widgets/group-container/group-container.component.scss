@@ -1,0 +1,25 @@
+section {
+  display: flex;
+
+  &.row-layout {
+    flex-direction: row;
+
+    app-group {
+      width: 100%;
+      &:not(:last-child) {
+        margin-right: .5rem;
+      }
+    }
+  }
+
+  &.column-layout {
+    flex-direction: column;
+
+    app-group {
+      width: 100%;
+      &:not(:last-child) {
+        margin-bottom: .5rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<Dialogbaustein ID="jmikosin/26.01.2016/02:40/289687">
+  <Name>DB_ZVK_03_029_daten_versorgungsfall_rente_ar_em_grund_VRF</Name>
+  <TOAnwendung ID="jmikosin/26.01.2016/11:19/230857"/>
+  <KarteikarteList>
+    <Karteikarte>
+      <Name>Dummy-Karte</Name>
+      <GruppeList>
+        <Gruppe ID="jmikosin/26.01.2016/02:40/289678">
+          <Name>ArEmSonstGrund</Name>
+          <Beschriftung>Sonstiger Berichtigungsgrund V1</Beschriftung>
+          <Gruppentyp>
+            <Feldgruppe>
+              <FeldList>
+                <Feld>
+                  <Name>SonstBerichtigungsgrund</Name>
+                  <Feldtyp>
+                    <TextfeldMehrzeilig>
+                    </TextfeldMehrzeilig>
+                  </Feldtyp>
+                  <TOZugriff ID="/pflichtVertrag/versicherter/vertragsAnspruchsfall"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.RentenanspruchsfallTO.sonstigerBerichtigungsgrund"/>
+                  <Anzeige>true</Anzeige>
+                  <Bearbeitbar>true</Bearbeitbar>
+                  <HilfeText><![CDATA[Angabe, nur wenn Berichtigung vorliegt und als Berichtigungsgrund 'Sonstiges' angegeben wurde.]]></HilfeText>
+                </Feld>
+              </FeldList>
+              <TOZugriff ID="/"/>
+            </Feldgruppe>
+          </Gruppentyp>
+        </Gruppe>
+      </GruppeList>
+    </Karteikarte>
+  </KarteikarteList>
+  <Dokumentation>
+  </Dokumentation>
+</Dialogbaustein>

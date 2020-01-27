@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<Dialogbaustein ID="jmikosin/29.01.2016/09:19/189234">
+  <Name>DB_ZVK_03_029F_Vertragsanspruchsfaelle</Name>
+  <Beschriftung>Vertragsanspruchsfälle V2 - V5</Beschriftung>
+  <TOAnwendung ID="jmikosin/29.01.2016/09:03/189161"/>
+  <KarteikarteList>
+    <Karteikarte>
+      <Name>DB_ZVK_03_029F_Vertragsanspruchsfaelle</Name>
+      <Beschriftung>DB_ZVK_03_029F_Vertragsanspruchsfaelle</Beschriftung>
+      <GruppeList>
+        <Gruppe ID="jmikosin/29.01.2016/10:11/316003">
+          <Name>vertragKontextinformationen2</Name>
+          <Beschriftung>VertragKontextinformationen</Beschriftung>
+          <Gruppentyp>
+            <Tabellengruppe>
+              <TOZugriff ID="/freiwilligeVertragKontextinformationenMuss"/>
+              <TabellenspalteList>
+                <Tabellenspalte ID="jmikosin/29.01.2016/10:14/316065">
+                  <Name>vertragsNr</Name>
+                  <Beschriftung>Vertragsnummer</Beschriftung>
+                  <LabelTooltip>Vertragsnummer</LabelTooltip>
+                  <Spaltentyp>
+                    <TextfeldEinzeilig>
+                    </TextfeldEinzeilig>
+                  </Spaltentyp>
+                  <TOZugriff ID="/vertrag"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.VersichertenvertragZvkTO.vertragsNr"/>
+                  <Anzeige>true</Anzeige>
+                  <Ausrichtung>
+                    <Linksbuendig/>
+                  </Ausrichtung>
+                </Tabellenspalte>
+                <Tabellenspalte ID="jmikosin/29.01.2016/10:15/316066">
+                  <Name>anspruchsfall</Name>
+                  <Beschriftung>Versicherungsfall</Beschriftung>
+                  <LabelTooltip>Versicherungsfall</LabelTooltip>
+                  <Spaltentyp>
+                    <TextfeldEinzeilig>
+                      <Format ID="Datumsformat"/>
+                    </TextfeldEinzeilig>
+                  </Spaltentyp>
+                  <TOZugriff ID="/vertrag/versicherter/vertragsAnspruchsfall"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.RentenanspruchsfallTO.datumVersicherungsfall"/>
+                  <Anzeige>true</Anzeige>
+                  <Ausrichtung>
+                    <Rechtsbuendig/>
+                  </Ausrichtung>
+                </Tabellenspalte>
+                <Tabellenspalte ID="jmikosin/29.01.2016/10:16/316067">
+                  <Name>altersrentenart</Name>
+                  <Beschriftung>Rentenart</Beschriftung>
+                  <LabelTooltip>Rentenart</LabelTooltip>
+                  <Spaltentyp>
+                    <TextfeldEinzeilig>
+                    </TextfeldEinzeilig>
+                  </Spaltentyp>
+                  <TOZugriff ID="/vertrag/versicherter/vertragsAnspruchsfall"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.RentenanspruchsfallTO.altersrentenart"/>
+                  <Anzeige>true</Anzeige>
+                  <Ausrichtung>
+                    <Linksbuendig/>
+                  </Ausrichtung>
+                </Tabellenspalte>
+                <Tabellenspalte ID="jmikosin/29.01.2016/10:17/316068">
+                  <Name>tatsaechlicherRentenbeginn</Name>
+                  <Beschriftung>Tatsächlicher Rentenbeginn</Beschriftung>
+                  <LabelTooltip>Tatsächlicher Rentenbeginn</LabelTooltip>
+                  <Spaltentyp>
+                    <TextfeldEinzeilig>
+                      <Format ID="Datumsformat"/>
+                    </TextfeldEinzeilig>
+                  </Spaltentyp>
+                  <TOZugriff ID="/vertrag/versicherter/vertragsAnspruchsfall"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.RentenanspruchsfallTO.beginnAnspruch"/>
+                  <Anzeige>true</Anzeige>
+                  <Ausrichtung>
+                    <Rechtsbuendig/>
+                  </Ausrichtung>
+                </Tabellenspalte>
+                <Tabellenspalte ID="PPAGACZ/20.09.2016/01:25/197361">
+                  <Name>antragsdatum</Name>
+                  <Beschriftung>Eingangsdatum</Beschriftung>
+                  <LabelTooltip>Eingangsdatum</LabelTooltip>
+                  <Spaltentyp>
+                    <TextfeldEinzeilig>
+                      <Format ID="Datumsformat"/>
+                    </TextfeldEinzeilig>
+                  </Spaltentyp>
+                  <TOZugriff ID="/vertrag/versicherter/vertragsAnspruchsfall"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.RentenanspruchsfallTO.antragsdatum"/>
+                  <Anzeige>true</Anzeige>
+                  <Ausrichtung>
+                    <Rechtsbuendig/>
+                  </Ausrichtung>
+                </Tabellenspalte>
+                <Tabellenspalte ID="jmikosin/29.01.2016/10:19/316069">
+                  <Name>berichtigungsgrund</Name>
+                  <Beschriftung>Berichtigungsgrund</Beschriftung>
+                  <LabelTooltip>Berichtigungsgrund</LabelTooltip>
+                  <Spaltentyp>
+                    <TextfeldEinzeilig>
+                    </TextfeldEinzeilig>
+                  </Spaltentyp>
+                  <TOZugriff ID="/vertrag/versicherter/vertragsAnspruchsfall"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.RentenanspruchsfallTO.berichtigungsgrund"/>
+                  <Anzeige>true</Anzeige>
+                  <Ausrichtung>
+                    <Linksbuendig/>
+                  </Ausrichtung>
+                </Tabellenspalte>
+                <Tabellenspalte ID="jmikosin/04.03.2016/08:10/193797">
+                  <Name>berechnungMitMutterschutzKnz</Name>
+                  <Beschriftung>Vertr.schutz Abschlag</Beschriftung>
+                  <LabelTooltip>Vertr.schutz Abschlag</LabelTooltip>
+                  <Spaltentyp>
+                    <Checkbox>
+                    </Checkbox>
+                  </Spaltentyp>
+                  <TOZugriff ID="/vertrag/versicherter/vertragsAnspruchsfall"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.RentenanspruchsfallTO.berechnungMitMutterschutzKnz"/>
+                  <Anzeige>true</Anzeige>
+                  <Ausrichtung>
+                    <Mittig/>
+                  </Ausrichtung>
+                </Tabellenspalte>
+              </TabellenspalteList>
+              <Tabellensteuerung>
+                <Hoehe>100</Hoehe>
+                <Breite>200</Breite>
+                <TabellenBearbeitungOption>
+                  <TabellenBearbeitung>
+                    <Bearbeitungsdialog ID="ch.forumedia.futura.client.zvk.vtg.DU_ZVK_03_006F_Versichertenvertragsanspruchsfalldaten"/>
+                    <TooltipBearbeiten>Bearbeiten</TooltipBearbeiten>
+                    <TooltipAnsehen>Ansehen</TooltipAnsehen>
+                  </TabellenBearbeitung>
+                </TabellenBearbeitungOption>
+                <TabellenAuskunftsOption>
+                  <OhneAuskunft/>
+                </TabellenAuskunftsOption>
+              </Tabellensteuerung>
+              <Tabellensortierung>
+                <MitSortierung>
+                  <SpaltePrio1 ID="jmikosin/29.01.2016/10:14/316065"/>
+                </MitSortierung>
+              </Tabellensortierung>
+            </Tabellengruppe>
+          </Gruppentyp>
+          <Umbruch>true</Umbruch>
+        </Gruppe>
+      </GruppeList>
+    </Karteikarte>
+  </KarteikarteList>
+  <Dokumentation>
+  </Dokumentation>
+</Dialogbaustein>

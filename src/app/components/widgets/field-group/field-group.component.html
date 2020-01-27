@@ -1,0 +1,4 @@
+<ng-container *ngIf="value && value.fields && value.fields.length">
+  <app-field *ngFor="let field of value.fields" [value]="field"></app-field>
+</ng-container>
+

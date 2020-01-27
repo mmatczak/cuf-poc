@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<Dialogbaustein ID="schall/25.05.2004/09:07/416054">
+  <Name>DG_ZVK_03_006F_Versicherter_Rente_festsetzen_AR</Name>
+  <Batchgenerierung>true</Batchgenerierung>
+  <MappingDateiErzeugen>true</MappingDateiErzeugen>
+  <TOAnwendung ID="PPAGACZ/03.10.2016/02:15/200177"/>
+  <Kopfkarte>true</Kopfkarte>
+  <KarteikarteList>
+    <Karteikarte>
+      <Name>Kopfkarte</Name>
+      <Beschriftung>Kopfkarte</Beschriftung>
+      <GruppeList>
+        <Gruppe ID="schall/02.06.2004/08:35/404812">
+          <Name>Kopfkarte</Name>
+          <Beschriftung>Versicherter</Beschriftung>
+          <Gruppentyp>
+            <Feldgruppenimport>
+              <TOZugriff ID="/geVoTransaktion/partner"/>
+              <StandardDBS ID="aschob/08.03.2004/02:03/136829"/>
+              <Gruppe ID="aschob/08.03.2004/02:03/136903"/>
+            </Feldgruppenimport>
+          </Gruppentyp>
+        </Gruppe>
+        <Gruppe ID="esliwa/16.08.2010/08:24/138035">
+          <Name>Stichtag</Name>
+          <Beschriftung>Stichtag</Beschriftung>
+          <Gruppentyp>
+            <Feldgruppe>
+              <FeldList>
+                <Feld>
+                  <Name>stichtag</Name>
+                  <Beschriftung>Rentenbeginn</Beschriftung>
+                  <Feldtyp>
+                    <TextfeldEinzeilig>
+                      <Spalten>8</Spalten>
+                      <Format ID="Datumsformat"/>
+                      <Ausrichtung>
+                        <Linksbuendig/>
+                      </Ausrichtung>
+                    </TextfeldEinzeilig>
+                  </Feldtyp>
+                  <TOZugriff ID="/geVoTransaktion"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.plf.pro.GeVoTransaktionTO.stichtag"/>
+                  <Anzeige>true</Anzeige>
+                  <HilfeText><![CDATA[Anfang eines beliebigen Monats]]></HilfeText>
+                </Feld>
+              </FeldList>
+              <TOZugriff ID="/geVoTransaktion"/>
+              <Spalten>2</Spalten>
+            </Feldgruppe>
+          </Gruppentyp>
+          <Umbruch>true</Umbruch>
+        </Gruppe>
+      </GruppeList>
+    </Karteikarte>
+    <Karteikarte>
+      <Name>rentendaten</Name>
+      <Beschriftung>Rentendaten</Beschriftung>
+      <GruppeList>
+        <Gruppe ID="jmikosin/28.01.2016/11:52/193636">
+          <Name>AnspruchsfallV1</Name>
+          <Beschriftung>Vertragsanspruchsfall V1</Beschriftung>
+          <Gruppentyp>
+            <Feldgruppenimport>
+              <TOZugriff ID="/geVoTransaktion"/>
+              <StandardDBS ID="jmikosin/26.01.2016/11:19/230832"/>
+              <Gruppe ID="jmikosin/26.01.2016/11:19/230823"/>
+              <AktivierungEintragGUIElementList>
+                <AktivierungEintragGUIElement>
+                  <GUIElement>antragsdatum</GUIElement>
+                  <Wert>MUSS</Wert>
+                </AktivierungEintragGUIElement>
+                <AktivierungEintragGUIElement>
+                  <GUIElement>Rentenbeginn</GUIElement>
+                  <Wert>MUSS</Wert>
+                </AktivierungEintragGUIElement>
+                <AktivierungEintragGUIElement>
+                  <GUIElement>rentenart</GUIElement>
+                  <Wert>MUSS</Wert>
+                </AktivierungEintragGUIElement>
+                <AktivierungEintragGUIElement>
+                  <GUIElement>datumVersicherungsfall</GUIElement>
+                  <Wert>MUSS</Wert>
+                </AktivierungEintragGUIElement>
+                <AktivierungEintragGUIElement>
+                  <GUIElement>wartezeitGiltErfuelltKnz</GUIElement>
+                  <Wert>KANN</Wert>
+                </AktivierungEintragGUIElement>
+                <AktivierungEintragGUIElement>
+                  <GUIElement>berichtigungsgrund</GUIElement>
+                  <Wert>KANN</Wert>
+                </AktivierungEintragGUIElement>
+                <AktivierungEintragGUIElement>
+                  <GUIElement>regressfallKnz</GUIElement>
+                  <Wert>KANN</Wert>
+                </AktivierungEintragGUIElement>
+                <AktivierungEintragGUIElement>
+                  <GUIElement>mutterschutzZeitenBeruecksichtigen</GUIElement>
+                  <Wert>KANN</Wert>
+                </AktivierungEintragGUIElement>
+                <AktivierungEintragGUIElement>
+                  <GUIElement>mindestens52WoArbeitslosKnz</GUIElement>
+                  <Wert>KANN</Wert>
+                </AktivierungEintragGUIElement>
+                <AktivierungEintragGUIElement>
+                  <GUIElement>langjaehrigUntertageKnz</GUIElement>
+                  <Wert>KANN</Wert>
+                </AktivierungEintragGUIElement>
+                <AktivierungEintragGUIElement>
+                  <GUIElement>schwerbehindertKnz</GUIElement>
+                  <Wert>KANN</Wert>
+                </AktivierungEintragGUIElement>
+                <AktivierungEintragGUIElement>
+                  <GUIElement>ravStatus</GUIElement>
+                  <Wert>BERECHNET</Wert>
+                </AktivierungEintragGUIElement>
+                <AktivierungEintragGUIElement>
+                  <GUIElement>gesetzlRentenversichertKnz</GUIElement>
+                  <Wert>KANN</Wert>
+                </AktivierungEintragGUIElement>
+                <AktivierungEintragGUIElement>
+                  <GUIElement>vertschutyAbschlag</GUIElement>
+                  <Wert>KANN</Wert>
+                </AktivierungEintragGUIElement>
+                <AktivierungEintragGUIElement>
+                  <GUIElement>vertschutzAbschlag</GUIElement>
+                  <Wert>KANN</Wert>
+                </AktivierungEintragGUIElement>
+                <AktivierungEintragGUIElement>
+                  <GUIElement>zwangsabfUnterbindenKnz</GUIElement>
+                  <Wert>KANN</Wert>
+                </AktivierungEintragGUIElement>
+                <AktivierungEintragGUIElement>
+                  <GUIElement>hibliAnspruchBeiVersNr</GUIElement>
+                  <Wert>KANN</Wert>
+                </AktivierungEintragGUIElement>
+              </AktivierungEintragGUIElementList>
+            </Feldgruppenimport>
+          </Gruppentyp>
+          <Umbruch>true</Umbruch>
+        </Gruppe>
+        <Gruppe ID="jmikosin/28.01.2016/02:56/237364">
+          <Name>ArEmSonstGrund5</Name>
+          <Beschriftung>Sonstiger Berichtigungsgrund V1</Beschriftung>
+          <Gruppentyp>
+            <Feldgruppenimport>
+              <TOZugriff ID="/geVoTransaktion"/>
+              <StandardDBS ID="jmikosin/26.01.2016/02:40/289687"/>
+              <Gruppe ID="jmikosin/26.01.2016/02:40/289678"/>
+            </Feldgruppenimport>
+          </Gruppentyp>
+          <Umbruch>true</Umbruch>
+        </Gruppe>
+        <Gruppe ID="PPAGACZ/01.12.2016/12:15/209796">
+          <Name>vertragKontextinformationen26</Name>
+          <Beschriftung>Vertragsanspruchsfälle V2-V5</Beschriftung>
+          <Gruppentyp>
+            <Tabellengruppenimport>
+              <TOZugriff ID="/geVoTransaktion/freiwilligeVertragKontextinformationenMuss"/>
+              <StandardDBS ID="jmikosin/29.01.2016/09:19/189234"/>
+              <Gruppe ID="jmikosin/29.01.2016/10:11/316003"/>
+            </Tabellengruppenimport>
+          </Gruppentyp>
+          <Umbruch>true</Umbruch>
+        </Gruppe>
+        <Gruppe ID="jmikosin/24.03.2016/02:29/204567">
+          <Name>Rentendaten2</Name>
+          <Beschriftung>Rentendaten</Beschriftung>
+          <Gruppentyp>
+            <Feldgruppenimport>
+              <TOZugriff ID="/geVoTransaktion"/>
+              <StandardDBS ID="jmikosin/26.01.2016/11:19/230832"/>
+              <Gruppe ID="jmikosin/24.03.2016/02:23/193485"/>
+              <AktivierungEintragGUIElementList>
+                <AktivierungEintragGUIElement>
+                  <GUIElement>hibliAnspruchBeiVersNr</GUIElement>
+                  <Wert>KANN</Wert>
+                </AktivierungEintragGUIElement>
+                <AktivierungEintragGUIElement>
+                  <GUIElement>zwangsabfUnterbindenKnz</GUIElement>
+                  <Wert>KANN</Wert>
+                </AktivierungEintragGUIElement>
+              </AktivierungEintragGUIElementList>
+            </Feldgruppenimport>
+          </Gruppentyp>
+          <Umbruch>true</Umbruch>
+        </Gruppe>
+        <Gruppe ID="jmikosin/14.03.2016/10:44/344089">
+          <Name>versicherungstraeger5</Name>
+          <Beschriftung>Rentenversicherungsträger</Beschriftung>
+          <Gruppentyp>
+            <Feldgruppenimport>
+              <TOZugriff ID="/geVoTransaktion/partner/versorgungsverhaeltnisZvk/renteZvk"/>
+              <StandardDBS ID="jmikosin/29.01.2016/10:40/325446"/>
+              <Gruppe ID="jmikosin/29.01.2016/10:40/325433"/>
+              <AktivierungEintragGUIElementList>
+                <AktivierungEintragGUIElement>
+                  <GUIElement>nameAnzeige</GUIElement>
+                  <Wert>ANZEIGE</Wert>
+                </AktivierungEintragGUIElement>
+                <AktivierungEintragGUIElement>
+                  <GUIElement>nummerAnzeige</GUIElement>
+                  <Wert>KANN</Wert>
+                </AktivierungEintragGUIElement>
+                <AktivierungEintragGUIElement>
+                  <GUIElement>gesetzlRentenversichertKnz</GUIElement>
+                  <Wert>KANN</Wert>
+                </AktivierungEintragGUIElement>
+                <AktivierungEintragGUIElement>
+                  <GUIElement>ravStatus</GUIElement>
+                  <Wert>BERECHNET</Wert>
+                </AktivierungEintragGUIElement>
+              </AktivierungEintragGUIElementList>
+            </Feldgruppenimport>
+          </Gruppentyp>
+          <Umbruch>true</Umbruch>
+        </Gruppe>
+      </GruppeList>
+    </Karteikarte>
+    <Karteikarte>
+      <Name>DB_ZVK_01_381F</Name>
+      <Beschriftung>Punkte gesamt als Rentenleistung</Beschriftung>
+      <GruppeList>
+        <Gruppe ID="jmikosin/01.02.2016/11:33/326668">
+          <Name>V1Gesamtpunkte3</Name>
+          <Beschriftung>V1 - Versorgungspunkte</Beschriftung>
+          <Gruppentyp>
+            <Feldgruppenimport>
+              <TOZugriff ID="/geVoTransaktion"/>
+              <StandardDBS ID="jmikosin/01.02.2016/10:56/278130"/>
+              <Gruppe ID="jmikosin/01.02.2016/10:56/278083"/>
+            </Feldgruppenimport>
+          </Gruppentyp>
+          <Umbruch>true</Umbruch>
+        </Gruppe>
+        <Gruppe ID="jmikosin/01.02.2016/11:33/326669">
+          <Name>AVIpunkte4</Name>
+          <Beschriftung>AVI Punkte</Beschriftung>
+          <Gruppentyp>
+            <Feldgruppenimport>
+              <TOZugriff ID="/geVoTransaktion"/>
+              <StandardDBS ID="jmikosin/01.02.2016/10:56/278130"/>
+              <Gruppe ID="jmikosin/01.02.2016/10:56/278107"/>
+            </Feldgruppenimport>
+          </Gruppentyp>
+          <Umbruch>true</Umbruch>
+        </Gruppe>
+        <Gruppe ID="jmikosin/01.02.2016/11:33/326670">
+          <Name>AVIIpunkte5</Name>
+          <Beschriftung>AVII Punkte</Beschriftung>
+          <Gruppentyp>
+            <Feldgruppenimport>
+              <TOZugriff ID="/geVoTransaktion"/>
+              <StandardDBS ID="jmikosin/01.02.2016/10:56/278130"/>
+              <Gruppe ID="jmikosin/01.02.2016/10:56/278125"/>
+            </Feldgruppenimport>
+          </Gruppentyp>
+          <Umbruch>true</Umbruch>
+        </Gruppe>
+        <Gruppe ID="jmikosin/01.02.2016/12:35/419106">
+          <Name>PK_ZVK_01_385F23</Name>
+          <Beschriftung>Zulagen nach Rentenbeginn</Beschriftung>
+          <Gruppentyp>
+            <Feldgruppenimport>
+              <TOZugriff ID="/geVoTransaktion"/>
+              <StandardDBS ID="jmikosin/01.02.2016/12:21/335863"/>
+              <Gruppe ID="jmikosin/01.02.2016/12:21/335858"/>
+            </Feldgruppenimport>
+          </Gruppentyp>
+          <Umbruch>true</Umbruch>
+        </Gruppe>
+        <Gruppe ID="RSKIBA/28.03.2018/12:58/272550">
+          <Name>DB_ZVK_99_381F</Name>
+          <Beschriftung>V2-V5 - Versorgungspunkte</Beschriftung>
+          <Gruppentyp>
+            <Tabellengruppenimport>
+              <TOZugriff ID="/geVoTransaktion/freiwilligeVertragKontextinformationen"/>
+              <StandardDBS ID="RSKIBA/28.03.2018/11:20/216446"/>
+              <Gruppe ID="RSKIBA/28.03.2018/12:17/216567"/>
+            </Tabellengruppenimport>
+          </Gruppentyp>
+          <Umbruch>true</Umbruch>
+        </Gruppe>
+      </GruppeList>
+    </Karteikarte>
+    <Karteikarte>
+      <Name>Ruhen_Krankenversicherung</Name>
+      <Beschriftung>Ruhen/Krankenvers.</Beschriftung>
+      <GruppeList>
+        <Gruppe ID="BLISEK/07.06.2016/03:35/276240">
+          <Name>Ruhenstatbestaende_R_AR2</Name>
+          <Beschriftung>Ruhenstatbestände - R AR</Beschriftung>
+          <Gruppentyp>
+            <Feldgruppenimport>
+              <TOZugriff ID="/geVoTransaktion"/>
+              <StandardDBS ID="jmikosin/01.02.2016/12:53/428232"/>
+              <Gruppe ID="jmikosin/01.02.2016/12:53/428226"/>
+            </Feldgruppenimport>
+          </Gruppentyp>
+          <Umbruch>true</Umbruch>
+        </Gruppe>
+        <Gruppe ID="jmikosin/12.02.2016/08:48/192045">
+          <Name>Krankenversicherung1</Name>
+          <Beschriftung>Krankenversicherung</Beschriftung>
+          <Gruppentyp>
+            <Feldgruppenimport>
+              <TOZugriff ID="/geVoTransaktion/partner/versorgungsverhaeltnisZvk/renteZvk"/>
+              <StandardDBS ID="schall/24.05.2004/11:55/169924"/>
+              <Gruppe ID="schall/24.05.2004/11:55/170011"/>
+            </Feldgruppenimport>
+          </Gruppentyp>
+          <Umbruch>true</Umbruch>
+        </Gruppe>
+        <Gruppe ID="jmikosin/12.02.2016/08:48/192046">
+          <Name>Formblatt_zur_KV_und_PV2</Name>
+          <Beschriftung>Formblatt zur KV und PV</Beschriftung>
+          <Gruppentyp>
+            <Feldgruppenimport>
+              <TOZugriff ID="/geVoTransaktion/partner/versorgungsverhaeltnisZvk/renteZvk"/>
+              <StandardDBS ID="schall/24.05.2004/11:55/169924"/>
+              <Gruppe ID="schall/24.05.2004/11:55/170205"/>
+            </Feldgruppenimport>
+          </Gruppentyp>
+          <Umbruch>true</Umbruch>
+        </Gruppe>
+        <Gruppe ID="mpecherz/22.07.2011/12:21/165703">
+          <Name>zmvMeldungsDatensatzKontextinfo24</Name>
+          <Beschriftung>Krk-Meldungen</Beschriftung>
+          <Gruppentyp>
+            <Tabellengruppenimport>
+              <TOZugriff ID="/geVoTransaktion/zmvMeldungsDatensatzKontextinfo"/>
+              <StandardDBS ID="pjedrkow/17.04.2012/06:42/48155"/>
+              <Gruppe ID="pjedrkow/17.04.2012/06:42/48150"/>
+            </Tabellengruppenimport>
+          </Gruppentyp>
+          <Umbruch>true</Umbruch>
+        </Gruppe>
+      </GruppeList>
+    </Karteikarte>
+    <Karteikarte>
+      <Name>Option_hibli</Name>
+      <Beschriftung>Option Hibli</Beschriftung>
+      <GruppeList>
+        <Gruppe ID="jmikosin/23.02.2016/12:16/304554">
+          <Name>freiwilligRollen44</Name>
+          <Beschriftung>Option Hibli</Beschriftung>
+          <Gruppentyp>
+            <Tabellengruppenimport>
+              <TOZugriff ID="/geVoTransaktion/freiwilligeVertragKontextinformationen"/>
+              <StandardDBS ID="jmikosin/02.02.2016/08:51/337953"/>
+              <Gruppe ID="jmikosin/02.02.2016/08:51/337948"/>
+            </Tabellengruppenimport>
+          </Gruppentyp>
+          <Umbruch>true</Umbruch>
+        </Gruppe>
+      </GruppeList>
+    </Karteikarte>
+    <Karteikarte>
+      <Name>Abschlagssaetze</Name>
+      <Beschriftung>Ab-/Zuschlagssätze - Zusatz-/Mindestrente</Beschriftung>
+      <GruppeList>
+        <Gruppe ID="jmikosin/02.02.2016/12:39/286907">
+          <Name>V1_Abschlagssatz1</Name>
+          <Beschriftung>V1 - Ab-/Zuschlagssatz</Beschriftung>
+          <Gruppentyp>
+            <Feldgruppenimport>
+              <TOZugriff ID="/geVoTransaktion"/>
+              <StandardDBS ID="jmikosin/02.02.2016/11:49/193433"/>
+              <Gruppe ID="jmikosin/02.02.2016/11:49/193427"/>
+            </Feldgruppenimport>
+          </Gruppentyp>
+          <Umbruch>true</Umbruch>
+        </Gruppe>
+        <Gruppe ID="jmikosin/23.02.2016/11:48/248868">
+          <Name>V2_V5_Abschlagssatz4</Name>
+          <Beschriftung>V2 - V5 - Ab-/Zuschlagssatz</Beschriftung>
+          <Gruppentyp>
+            <Tabellengruppenimport>
+              <TOZugriff ID="/geVoTransaktion/freiwilligeVertragKontextinformationen"/>
+              <StandardDBS ID="jmikosin/02.02.2016/12:45/294768"/>
+              <Gruppe ID="jmikosin/02.02.2016/12:45/294763"/>
+            </Tabellengruppenimport>
+          </Gruppentyp>
+          <Umbruch>true</Umbruch>
+        </Gruppe>
+        <Gruppe ID="jmikosin/02.02.2016/01:52/240124">
+          <Name>V1_Zusatzrente_Mindestrente6</Name>
+          <Beschriftung>V1 - Zusatz- / Mindestrente</Beschriftung>
+          <Gruppentyp>
+            <Feldgruppenimport>
+              <TOZugriff ID="/geVoTransaktion"/>
+              <StandardDBS ID="jmikosin/02.02.2016/01:40/198555"/>
+              <Gruppe ID="jmikosin/02.02.2016/01:40/198547"/>
+              <AktivierungEintragGUIElementList>
+                <AktivierungEintragGUIElement>
+                  <GUIElement>abbaubarerAusgleichsbetrag</GUIElement>
+                  <Wert>ENTFERNT</Wert>
+                </AktivierungEintragGUIElement>
+                <AktivierungEintragGUIElement>
+                  <GUIElement>nichtAbbaubarerAusgleichsbetragV1</GUIElement>
+                  <Wert>ENTFERNT</Wert>
+                </AktivierungEintragGUIElement>
+                <AktivierungEintragGUIElement>
+                  <GUIElement>zusatzrenteEingabe</GUIElement>
+                  <Wert>KANN</Wert>
+                </AktivierungEintragGUIElement>
+                <AktivierungEintragGUIElement>
+                  <GUIElement>mindestrenteEingabe</GUIElement>
+                  <Wert>KANN</Wert>
+                </AktivierungEintragGUIElement>
+              </AktivierungEintragGUIElementList>
+            </Feldgruppenimport>
+          </Gruppentyp>
+          <Umbruch>true</Umbruch>
+        </Gruppe>
+      </GruppeList>
+    </Karteikarte>
+    <Karteikarte>
+      <Name>Kapitalisierung</Name>
+      <Beschriftung>Kapitalisierung</Beschriftung>
+      <GruppeList>
+        <Gruppe ID="PPAGACZ/03.10.2016/03:04/200163">
+          <Name>freiwilligRollen23</Name>
+          <Beschriftung>Kapitalisierung</Beschriftung>
+          <Gruppentyp>
+            <Tabellengruppenimport>
+              <TOZugriff ID="/geVoTransaktion/freiwilligeVertragKontextinformationen"/>
+              <StandardDBS ID="jmikosin/03.02.2016/11:07/193239"/>
+              <Gruppe ID="jmikosin/03.02.2016/11:07/193234"/>
+            </Tabellengruppenimport>
+          </Gruppentyp>
+          <Umbruch>true</Umbruch>
+        </Gruppe>
+      </GruppeList>
+    </Karteikarte>
+    <Karteikarte>
+      <Name>R_AR_1</Name>
+      <Beschriftung>R AR (1)</Beschriftung>
+      <GruppeList>
+        <Gruppe ID="jmikosin/03.02.2016/01:47/446776">
+          <Name>MindestZusatzrente1</Name>
+          <Beschriftung>Ansprüche</Beschriftung>
+          <Gruppentyp>
+            <Feldgruppenimport>
+              <TOZugriff ID="/geVoTransaktion"/>
+              <StandardDBS ID="jmikosin/03.02.2016/12:59/426083"/>
+              <Gruppe ID="jmikosin/03.02.2016/12:59/426012"/>
+            </Feldgruppenimport>
+          </Gruppentyp>
+          <Umbruch>true</Umbruch>
+        </Gruppe>
+        <Gruppe ID="jmikosin/03.02.2016/01:47/446777">
+          <Name>Ausgleichsbetrag2</Name>
+          <Beschriftung>Ausgleichsbetrag</Beschriftung>
+          <Gruppentyp>
+            <Feldgruppenimport>
+              <TOZugriff ID="/geVoTransaktion"/>
+              <StandardDBS ID="jmikosin/03.02.2016/12:59/426083"/>
+              <Gruppe ID="jmikosin/03.02.2016/12:59/426020"/>
+            </Feldgruppenimport>
+          </Gruppentyp>
+          <Umbruch>true</Umbruch>
+        </Gruppe>
+        <Gruppe ID="jmikosin/03.02.2016/01:47/446778">
+          <Name>Werte_zum_Rentenbeginn3</Name>
+          <Beschriftung>Werte zum Rentenbeginn</Beschriftung>
+          <Gruppentyp>
+            <Feldgruppenimport>
+              <TOZugriff ID="/geVoTransaktion"/>
+              <StandardDBS ID="jmikosin/03.02.2016/12:59/426083"/>
+              <Gruppe ID="jmikosin/03.02.2016/12:59/426034"/>
+              <AktivierungEintragGUIElementList>
+                <AktivierungEintragGUIElement>
+                  <GUIElement>rNachAbschlag2</GUIElement>
+                  <Wert>ENTFERNT</Wert>
+                </AktivierungEintragGUIElement>
+                <AktivierungEintragGUIElement>
+                  <GUIElement>rNachdynam</GUIElement>
+                  <Wert>ENTFERNT</Wert>
+                </AktivierungEintragGUIElement>
+              </AktivierungEintragGUIElementList>
+            </Feldgruppenimport>
+          </Gruppentyp>
+          <Umbruch>true</Umbruch>
+        </Gruppe>
+        <Gruppe ID="jmikosin/03.02.2016/01:47/446779">
+          <Name>V1_R_AR4</Name>
+          <Beschriftung>V1 - R AR</Beschriftung>
+          <Gruppentyp>
+            <Feldgruppenimport>
+              <TOZugriff ID="/geVoTransaktion"/>
+              <StandardDBS ID="jmikosin/03.02.2016/12:59/426083"/>
+              <Gruppe ID="jmikosin/03.02.2016/12:59/426063"/>
+            </Feldgruppenimport>
+          </Gruppentyp>
+          <Umbruch>true</Umbruch>
+        </Gruppe>
+        <Gruppe ID="LFAJER/24.02.2016/11:01/197154">
+          <Name>V2_V5_R_AR5</Name>
+          <Beschriftung>V2-V5 - R AR</Beschriftung>
+          <Gruppentyp>
+            <Tabellengruppenimport>
+              <TOZugriff ID="/geVoTransaktion/freiwilligeVertragKontextinformationen"/>
+              <StandardDBS ID="jmikosin/04.02.2016/11:11/479326"/>
+              <Gruppe ID="jmikosin/04.02.2016/11:11/479321"/>
+              <AktivierungEintragGUIElementList>
+                <AktivierungEintragGUIElement>
+                  <GUIElement>leistungGesamtVerwendet</GUIElement>
+                  <Wert>AUSBLENDEN</Wert>
+                </AktivierungEintragGUIElement>
+              </AktivierungEintragGUIElementList>
+            </Tabellengruppenimport>
+          </Gruppentyp>
+          <Umbruch>true</Umbruch>
+        </Gruppe>
+      </GruppeList>
+    </Karteikarte>
+    <Karteikarte>
+      <Name>R_AR_2</Name>
+      <Beschriftung>Rente gesamt</Beschriftung>
+      <GruppeList>
+        <Gruppe ID="bzinke/29.10.2004/11:29/64145">
+          <Name>Zusammenführung_V1-V5_auf_V1_R_AR13</Name>
+          <Beschriftung>Zusammenführung von V1-V5 auf V1</Beschriftung>
+          <Gruppentyp>
+            <Feldgruppenimport>
+              <TOZugriff ID="/geVoTransaktion/partner/versorgungsverhaeltnisZvk/renteZvk/pflichtRolle"/>
+              <StandardDBS ID="schall/24.05.2004/09:17/214228"/>
+              <Gruppe ID="schall/24.05.2004/09:18/214679"/>
+            </Feldgruppenimport>
+          </Gruppentyp>
+          <Umbruch>true</Umbruch>
+        </Gruppe>
+      </GruppeList>
+    </Karteikarte>
+    <Karteikarte>
+      <Name>Abfindung</Name>
+      <Beschriftung>Abfindung</Beschriftung>
+      <GruppeList>
+        <Gruppe ID="jmikosin/04.02.2016/01:01/307076">
+          <Name>V1_Abfindung_AR4</Name>
+          <Beschriftung>V1 - Abfindung AR</Beschriftung>
+          <Gruppentyp>
+            <Feldgruppenimport>
+              <TOZugriff ID="/geVoTransaktion"/>
+              <StandardDBS ID="jmikosin/04.02.2016/12:50/262434"/>
+              <Gruppe ID="jmikosin/04.02.2016/12:50/262426"/>
+            </Feldgruppenimport>
+          </Gruppentyp>
+          <Umbruch>true</Umbruch>
+        </Gruppe>
+        <Gruppe ID="jmikosin/23.02.2016/01:20/510144">
+          <Name>Abfindung_AR_V2_V57</Name>
+          <Beschriftung>V2-V5 - Abfindung AR</Beschriftung>
+          <Gruppentyp>
+            <Tabellengruppenimport>
+              <TOZugriff ID="/geVoTransaktion/freiwilligeVertragKontextinformationen"/>
+              <StandardDBS ID="jmikosin/04.02.2016/01:05/310674"/>
+              <Gruppe ID="jmikosin/04.02.2016/01:05/310669"/>
+            </Tabellengruppenimport>
+          </Gruppentyp>
+          <Umbruch>true</Umbruch>
+        </Gruppe>
+        <Gruppe ID="bzinke/29.10.2004/11:53/55912">
+          <Name>Abfindung_AR_Zusammenführung_auf_V115</Name>
+          <Beschriftung>Zusammenführung von V1-V5 auf V1</Beschriftung>
+          <Gruppentyp>
+            <Feldgruppenimport>
+              <TOZugriff ID="/geVoTransaktion/partner/versorgungsverhaeltnisZvk/renteZvk/pflichtRolle"/>
+              <StandardDBS ID="plazewsk/07.10.2004/10:06/83479"/>
+              <Gruppe ID="plazewsk/07.10.2004/10:30/118394"/>
+              <AktivierungEintragGUIElementList>
+                <AktivierungEintragGUIElement>
+                  <GUIElement>kZahlungBrutto</GUIElement>
+                  <Wert>ENTFERNT</Wert>
+                </AktivierungEintragGUIElement>
+                <AktivierungEintragGUIElement>
+                  <GUIElement>kAbzugDritte</GUIElement>
+                  <Wert>ENTFERNT</Wert>
+                </AktivierungEintragGUIElement>
+                <AktivierungEintragGUIElement>
+                  <GUIElement>kARzahlungNetto</GUIElement>
+                  <Wert>ENTFERNT</Wert>
+                </AktivierungEintragGUIElement>
+              </AktivierungEintragGUIElementList>
+            </Feldgruppenimport>
+          </Gruppentyp>
+          <Umbruch>true</Umbruch>
+        </Gruppe>
+      </GruppeList>
+    </Karteikarte>
+    <Karteikarte>
+      <Name>EVAQKurzung</Name>
+      <Beschriftung>EVA Q Kürzung</Beschriftung>
+      <GruppeList>
+        <Gruppe ID="ADBRZOZO/22.08.2019/04:16/215638">
+          <Name>eheversorgungsausgleich6</Name>
+          <Beschriftung>EVA Kürzung</Beschriftung>
+          <Gruppentyp>
+            <Tabellengruppenimport>
+              <TOZugriff ID="/geVoTransaktion/partner/versorgungsverhaeltnisZvk/eheversorgungsausgleicheZvk"/>
+              <StandardDBS ID="ADBRZOZO/22.08.2019/01:13/214563"/>
+              <Gruppe ID="ADBRZOZO/22.08.2019/01:13/214558"/>
+            </Tabellengruppenimport>
+          </Gruppentyp>
+          <Umbruch>true</Umbruch>
+        </Gruppe>
+      </GruppeList>
+    </Karteikarte>
+  </KarteikarteList>
+  <Dokumentation>
+    <ErzeugtVon>schall</ErzeugtVon>
+    <Erzeugungsdatum>26.05.2004/06:12</Erzeugungsdatum>
+  </Dokumentation>
+</Dialogbaustein>

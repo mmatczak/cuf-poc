@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<Dialogbaustein ID="jmikosin/26.01.2016/11:19/230832">
+  <Name>DB_ZVK_03_029_daten_versorgungsfall_rente_ar_em_VRF</Name>
+  <Batchgenerierung>true</Batchgenerierung>
+  <MappingDateiErzeugen>true</MappingDateiErzeugen>
+  <TOAnwendung ID="jmikosin/26.01.2016/11:19/230857"/>
+  <KarteikarteList>
+    <Karteikarte>
+      <Name>Dummy-Karte</Name>
+      <Beschriftung>Dummy-Karte</Beschriftung>
+      <GruppeList>
+        <Gruppe ID="jmikosin/26.01.2016/11:19/230823">
+          <Name>AnspruchsfallV1</Name>
+          <Beschriftung>Vertragsanspruchsfall V1</Beschriftung>
+          <Gruppentyp>
+            <Feldgruppe>
+              <FeldList>
+                <Feld>
+                  <Name>antragsdatum</Name>
+                  <Beschriftung>Eingangsdatum</Beschriftung>
+                  <LabelTooltip>Datum des Antragseingangs</LabelTooltip>
+                  <Feldtyp>
+                    <TextfeldEinzeilig>
+                      <Spalten>8</Spalten>
+                      <Format ID="Datumsformat"/>
+                      <Ausrichtung>
+                        <Linksbuendig/>
+                      </Ausrichtung>
+                    </TextfeldEinzeilig>
+                  </Feldtyp>
+                  <TOZugriff ID="/pflichtVertrag/versicherter/vertragsAnspruchsfall"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.RentenanspruchsfallTO.antragsdatum"/>
+                  <Anzeige>true</Anzeige>
+                  <HilfeText><![CDATA[Antragsdatum]]></HilfeText>
+                </Feld>
+                <Feld>
+                  <Name>Rentenbeginn</Name>
+                  <Beschriftung>Tatsächlicher Rentenbeginn</Beschriftung>
+                  <LabelTooltip>Tatsächlicher Rentenbeginn</LabelTooltip>
+                  <Feldtyp>
+                    <TextfeldEinzeilig>
+                      <Spalten>8</Spalten>
+                      <Format ID="Datumsformat"/>
+                      <Ausrichtung>
+                        <Linksbuendig/>
+                      </Ausrichtung>
+                    </TextfeldEinzeilig>
+                  </Feldtyp>
+                  <TOZugriff ID="/pflichtVertrag/versicherter/vertragsAnspruchsfall"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.RentenanspruchsfallTO.beginnAnspruch"/>
+                  <Anzeige>true</Anzeige>
+                  <HilfeText><![CDATA[Übernommener Rentenbeginn aus dem Altsystem.]]></HilfeText>
+                </Feld>
+                <Feld>
+                  <Name>rentenart</Name>
+                  <Beschriftung>Rentenart</Beschriftung>
+                  <LabelTooltip>Rentenart</LabelTooltip>
+                  <Feldtyp>
+                    <Combobox>
+                    </Combobox>
+                  </Feldtyp>
+                  <TOZugriff ID="/pflichtVertrag/versicherter/vertragsAnspruchsfall"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.RentenanspruchsfallTO.altersrentenart"/>
+                  <Anzeige>true</Anzeige>
+                </Feld>
+                <Feld>
+                  <Name>datumVersicherungsfall</Name>
+                  <Beschriftung>Versicherungsfall</Beschriftung>
+                  <LabelTooltip>Versicherungsfall</LabelTooltip>
+                  <Feldtyp>
+                    <TextfeldEinzeilig>
+                      <Spalten>8</Spalten>
+                      <Format ID="Datumsformat"/>
+                      <Ausrichtung>
+                        <Linksbuendig/>
+                      </Ausrichtung>
+                    </TextfeldEinzeilig>
+                  </Feldtyp>
+                  <TOZugriff ID="/pflichtVertrag/versicherter/vertragsAnspruchsfall"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.RentenanspruchsfallTO.datumVersicherungsfall"/>
+                  <Anzeige>true</Anzeige>
+                </Feld>
+                <Feld>
+                  <Name>wartezeitInMonaten</Name>
+                  <Beschriftung>Wartezeit (in Monaten)</Beschriftung>
+                  <LabelTooltip>Anzahl der Umlagemonate für die Wartezeit</LabelTooltip>
+                  <Feldtyp>
+                    <TextfeldEinzeilig>
+                      <Spalten>8</Spalten>
+                      <Format ID="Ganzzahlformat"/>
+                      <Ausrichtung>
+                        <Linksbuendig/>
+                      </Ausrichtung>
+                    </TextfeldEinzeilig>
+                  </Feldtyp>
+                  <TOZugriff ID="/pflichtVertrag/versicherter/PK_ZVK_01_055F"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.plf.vtg.DauerwertTO.anzahlMonate"/>
+                  <Anzeige>true</Anzeige>
+                  <HilfeText><![CDATA[Gesamthaft erworbene Umlagemonate bis zum Eintritt des Versicherungsfalles.]]></HilfeText>
+                </Feld>
+                <Feld>
+                  <Name>wartezeitGiltErfuelltKnz</Name>
+                  <Beschriftung>Wartezeit gilt als erfüllt</Beschriftung>
+                  <LabelTooltip>Wartezeit erfüllt wegen Arbeitsunfall</LabelTooltip>
+                  <Feldtyp>
+                    <Checkbox>
+                    </Checkbox>
+                  </Feldtyp>
+                  <TOZugriff ID="/pflichtVertrag/versicherter/vertragsAnspruchsfall"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.RentenanspruchsfallTO.wartezeitGiltErfuelltKnz"/>
+                  <Anzeige>true</Anzeige>
+                  <HilfeText><![CDATA[Der Sachbearbeiter kann entscheiden, ob die Wartezeit als erfüllt gilt.]]></HilfeText>
+                </Feld>
+                <Feld>
+                  <Name>mutterschutzZeitenBeruecksichtigen</Name>
+                  <Beschriftung>Mutterschutzzeiten berücksichtigen</Beschriftung>
+                  <LabelTooltip>Steuert, ob in der Rentenberechnung Ansprüche aus Mutterschutzzeiten berücksichtigt werden.</LabelTooltip>
+                  <Feldtyp>
+                    <Checkbox>
+                    </Checkbox>
+                  </Feldtyp>
+                  <TOZugriff ID="/pflichtVertrag/versicherter/vertragsAnspruchsfall"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.RentenanspruchsfallTO.berechnungMitMutterschutzKnz"/>
+                  <Anzeige>true</Anzeige>
+                  <HilfeText><![CDATA[Kennzeichen am Versorgungsfall. Gibt an, ob die Rente Ansprüche aus Mutterschutz enthält.]]></HilfeText>
+                </Feld>
+                <Feld>
+                  <Name>regressfallKnz</Name>
+                  <Beschriftung>Regressfall</Beschriftung>
+                  <LabelTooltip>Regressfall-Kennzeichen</LabelTooltip>
+                  <Feldtyp>
+                    <Checkbox>
+                    </Checkbox>
+                  </Feldtyp>
+                  <TOZugriff ID="/pflichtVertrag/versicherter/vertragsAnspruchsfall"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.RentenanspruchsfallTO.regressfallKnz"/>
+                  <Anzeige>true</Anzeige>
+                  <HilfeText><![CDATA[Dieses Feld dient zur Information. Der Sachbearbeiter kann in einem Regressfall die Daten des Schädigers in der Akte nachvollziehen.]]></HilfeText>
+                </Feld>
+                <Feld>
+                  <Name>langjaehrigUntertageKnz</Name>
+                  <Beschriftung>Langjährig unter Tage</Beschriftung>
+                  <LabelTooltip>Rentenvoraussetzungen werden geprüft (Nur ohne gesetzliche Rente zu setzen)</LabelTooltip>
+                  <Feldtyp>
+                    <Checkbox>
+                    </Checkbox>
+                  </Feldtyp>
+                  <TOZugriff ID="/pflichtVertrag/versicherter/vertragsAnspruchsfall"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.RentenanspruchsfallTO.langjaehrigUntertageKnz"/>
+                  <Anzeige>true</Anzeige>
+                  <HilfeText><![CDATA[Der SB gibt für nicht gesetzlich Rentenversicherte an, ob diese Bedingung für die Zuordnung der Rentenart zutrifft.]]></HilfeText>
+                </Feld>
+                <Feld>
+                  <Name>mindestens52WoArbeitslosKnz</Name>
+                  <Beschriftung>Mindestens 52 Wochen arbeitslos</Beschriftung>
+                  <LabelTooltip>Rentenvoraussetzungen werden geprüft (Nur ohne gesetzliche Rente zu setzen)</LabelTooltip>
+                  <Feldtyp>
+                    <Checkbox>
+                    </Checkbox>
+                  </Feldtyp>
+                  <TOZugriff ID="/pflichtVertrag/versicherter/vertragsAnspruchsfall"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.RentenanspruchsfallTO.mind52WochenArbeitslosKnz"/>
+                  <Anzeige>true</Anzeige>
+                  <HilfeText><![CDATA[Der SB gibt für nicht gesetzlich Rentenversicherte an, ob diese Bedingung für die Zuordnung der Rentenart zutrifft.]]></HilfeText>
+                </Feld>
+                <Feld>
+                  <Name>vertschutzAbschlag</Name>
+                  <Beschriftung>Vertr.schutz Abschlag</Beschriftung>
+                  <LabelTooltip>Vertr.schutz Abschlag</LabelTooltip>
+                  <Feldtyp>
+                    <Checkbox>
+                    </Checkbox>
+                  </Feldtyp>
+                  <TOZugriff ID="/pflichtVertrag/versicherter/vertragsAnspruchsfall"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.RentenanspruchsfallTO.vertrauensschutzKnz"/>
+                  <Anzeige>true</Anzeige>
+                </Feld>
+                <Feld>
+                  <Name>schwerbehindertKnz</Name>
+                  <Beschriftung>Schwerbehindert</Beschriftung>
+                  <LabelTooltip>Rentenvoraussetzungen werden geprüft (Nur ohne gesetzliche Rente zu setzen)</LabelTooltip>
+                  <Feldtyp>
+                    <Checkbox>
+                    </Checkbox>
+                  </Feldtyp>
+                  <TOZugriff ID="/pflichtVertrag/versicherter/vertragsAnspruchsfall"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.RentenanspruchsfallTO.schwerbehindertKnz"/>
+                  <Anzeige>true</Anzeige>
+                  <HilfeText><![CDATA[Der SB gibt für nicht gesetzlich Rentenversicherte an, ob diese Bedingung für die Zuordnung der Rentenart zutrifft.]]></HilfeText>
+                </Feld>
+                <Feld>
+                  <Name>berichtigungsgrund</Name>
+                  <Beschriftung>Berichtigungsgrund</Beschriftung>
+                  <LabelTooltip>Berichtigungsgrund (nur bei Berichtigung)</LabelTooltip>
+                  <Feldtyp>
+                    <Combobox>
+                    </Combobox>
+                  </Feldtyp>
+                  <TOZugriff ID="/pflichtVertrag/versicherter/vertragsAnspruchsfall"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.RentenanspruchsfallTO.berichtigungsgrund"/>
+                  <Anzeige>true</Anzeige>
+                  <HilfeText><![CDATA[Angabe, nur wenn Berichtigung vorliegt.]]></HilfeText>
+                </Feld>
+                <Feld>
+                  <Name>nurEigeneLeistungKnz</Name>
+                  <Beschriftung>Rente nur aus Eigenbeteiligung</Beschriftung>
+                  <Feldtyp>
+                    <Checkbox>
+                    </Checkbox>
+                  </Feldtyp>
+                  <TOZugriff ID="/pflichtVertrag/versicherter/vertragsAnspruchsfall"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.RentenanspruchsfallTO.nurEigeneLeistungKnz"/>
+                  <Anzeige>true</Anzeige>
+                </Feld>
+              </FeldList>
+              <TOZugriff ID="/"/>
+              <Spalten>4</Spalten>
+            </Feldgruppe>
+          </Gruppentyp>
+          <Umbruch>true</Umbruch>
+        </Gruppe>
+        <Gruppe ID="jmikosin/24.03.2016/02:23/193485">
+          <Name>Rentendaten</Name>
+          <Beschriftung>Rentendaten</Beschriftung>
+          <Gruppentyp>
+            <Feldgruppe>
+              <FeldList>
+                <Feld>
+                  <Name>hibliAnspruchBeiVersNr</Name>
+                  <Beschriftung>Hibli-Anspruch bei Vers.-Nr.</Beschriftung>
+                  <LabelTooltip>Hinterbliebenen-Anspruch bei Versicherungsnummer</LabelTooltip>
+                  <Feldtyp>
+                    <TextfeldEinzeilig>
+                      <Spalten>20</Spalten>
+                      <Ausrichtung>
+                        <Linksbuendig/>
+                      </Ausrichtung>
+                    </TextfeldEinzeilig>
+                  </Feldtyp>
+                  <TOZugriff ID="/partner/versorgungsverhaeltnis/renteZvk"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.RenteZvkTO.hibliRenteBeiVersNr"/>
+                  <Anzeige>true</Anzeige>
+                  <HilfeText><![CDATA[Das Feld dient zur Information und zeigt einen Hinterbliebenen-Anspruch des Leistungsempfängers an.
+]]></HilfeText>
+                </Feld>
+                <Feld>
+                  <Name>zwangsabfUnterbindenKnz</Name>
+                  <Beschriftung>Keine Zwangsabfindung</Beschriftung>
+                  <LabelTooltip>Rente wird trotz geringer Höhe nicht abgefunden</LabelTooltip>
+                  <Feldtyp>
+                    <Checkbox>
+                    </Checkbox>
+                  </Feldtyp>
+                  <TOZugriff ID="/partner/versorgungsverhaeltnis/renteZvk"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.RenteZvkTO.zwangsabfUnterbindenKnz"/>
+                  <Anzeige>true</Anzeige>
+                  <HilfeText><![CDATA[Eine Rente, die die Voraussetzungen für eine Zwangsabfindung erfüllt, wird nicht abgefunden, wenn das Kennzeichen gesetzt ist.
+]]></HilfeText>
+                </Feld>
+              </FeldList>
+              <TOZugriff ID="/"/>
+              <Spalten>4</Spalten>
+            </Feldgruppe>
+          </Gruppentyp>
+        </Gruppe>
+      </GruppeList>
+    </Karteikarte>
+  </KarteikarteList>
+  <Dokumentation>
+    <ErzeugtVon>schall</ErzeugtVon>
+    <Erzeugungsdatum>21.05.2004/01:50</Erzeugungsdatum>
+  </Dokumentation>
+</Dialogbaustein>

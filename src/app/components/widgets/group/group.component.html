@@ -1,0 +1,8 @@
+<div class="card w-100" *ngIf="value">
+  <div class="card-header">{{value.label}}</div>
+  <div class="card-body">
+    <div *ngIf="value.fieldGroup">
+      <app-field-group [value]="value.fieldGroup"></app-field-group>
+    </div>
+  </div>
+</div>
