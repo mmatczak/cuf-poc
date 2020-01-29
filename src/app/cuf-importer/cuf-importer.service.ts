@@ -3,7 +3,7 @@ import {forkJoin, Observable, of} from 'rxjs';
 import {flatMap, map} from 'rxjs/operators';
 import {parseXml} from '../xml-parser/parse-xml';
 import {Injectable} from '@angular/core';
-import {Dialogbaustein, Feldtyp, Gruppe} from './cuf-model';
+import {Dialogbaustein, Feldtyp, Gruppe, Gruppenimport} from './cuf-model';
 import {Dialog} from '../components/widgets/dialog/dialog.component';
 import {GroupContainer} from '../components/widgets/group-container/group-container.component';
 import {Group} from '../components/widgets/group/group.component';
@@ -47,41 +47,20 @@ export class CufImporterService {
                           const isTableGroupImport = !!(group.Gruppentyp && group.Gruppentyp.Tabellengruppenimport);
 
                           if (isFieldGroup) {
-                            const fields = group.Gruppentyp.Feldgruppe && group.Gruppentyp.Feldgruppe.FeldList
-                              && asArray(group.Gruppentyp.Feldgruppe.FeldList.Feld);
-                            groupContainer.groups.push({
-                              label: group.Beschriftung,
-                              breakLine: !!(group.Umbruch && group.Umbruch === 'true'),
-                              fieldGroup: {
-                                fields: fields.map(field => ({
-                                  label: field.Beschriftung,
-                                  tooltip: field.LabelTooltip,
-                                  type: mapFieldType(field.Feldtyp),
-                                  id: field.Name
-                                }))
-                              }
-                            });
+                            groupContainer.groups.push(mapFieldGroup(group));
                           } else if (isFieldGroupImport) {
-                            const groupId = group.Gruppentyp && group.Gruppentyp.Feldgruppenimport
-                              && group.Gruppentyp.Feldgruppenimport.Gruppe && group.Gruppentyp.Feldgruppenimport.Gruppe['@ID'];
-                            if (groupId) {
-                              const importedGroup = groupRegistry[groupId];
-                              if (importedGroup) {
-                                const fields = importedGroup.Gruppentyp.Feldgruppe && importedGroup.Gruppentyp.Feldgruppe.FeldList
-                                  && asArray(importedGroup.Gruppentyp.Feldgruppe.FeldList.Feld);
-                                groupContainer.groups.push({
-                                  label: group.Beschriftung || importedGroup.Beschriftung,
-                                  breakLine: !!(group.Umbruch && group.Umbruch === 'true'),
-                                  fieldGroup: {
-                                    fields: fields.map(field => ({
-                                      label: field.Beschriftung,
-                                      tooltip: field.LabelTooltip,
-                                      type: mapFieldType(field.Feldtyp),
-                                      id: field.Name
-                                    }))
-                                  }
-                                });
-                              }
+                            const groupToImport = group.Gruppentyp && group.Gruppentyp.Feldgruppenimport;
+                            const importedGroup = importGroupFromRegistry(groupToImport, groupRegistry);
+                            if (importedGroup) {
+                              groupContainer.groups.push(mapFieldGroup(group, importedGroup));
+                            }
+                          } else if (isTableGroup) {
+                            groupContainer.groups.push(mapTableGroup(group));
+                          } else if (isTableGroupImport) {
+                            const groupToImport = group.Gruppentyp && group.Gruppentyp.Tabellengruppenimport;
+                            const importedGroup = importGroupFromRegistry(groupToImport, groupRegistry);
+                            if (importedGroup) {
+                              groupContainer.groups.push(mapTableGroup(group, importedGroup));
                             }
                           }
                         });
@@ -116,8 +95,15 @@ function asArray<T>(objectOrArray: T | T[]): T[] {
   return Array.isArray(objectOrArray) ? objectOrArray : (objectOrArray ? [objectOrArray] : []);
 }
 
+function importGroupFromRegistry(groupToImport: Gruppenimport, groupRegistry: GroupRegistry) {
+  const idOfGroupToImport = groupToImport && groupToImport.Gruppe && groupToImport.Gruppe['@ID'];
+  if (idOfGroupToImport) {
+    return groupRegistry[idOfGroupToImport];
+  }
+}
+
 function mapFieldType(fieldType: Feldtyp): FieldType {
-  const mapping: {[key: string]: FieldType} = {
+  const mapping: { [key: string]: FieldType } = {
     TextfeldEinzeilig: 'TextField',
     TextfeldMehrzeilig: 'TextAreaField',
     Checkbox: 'CheckboxField',
@@ -128,6 +114,65 @@ function mapFieldType(fieldType: Feldtyp): FieldType {
     if (fieldTypesToMap && fieldTypesToMap.length) {
       return mapping[fieldTypesToMap[0]];
     }
+  }
+}
+
+function mapFieldGroup(originalGroup: Gruppe, importedGroup?: Gruppe): Group {
+  if (originalGroup) {
+    const noOfColumns = getNoOfColumns();
+    const fields = getFields();
+
+    return {
+      label: originalGroup.Beschriftung || (importedGroup && importedGroup.Beschriftung),
+      breakLine: !!(originalGroup.Umbruch && originalGroup.Umbruch === 'true'),
+      fieldGroup: {
+        fields: fields.map(field => ({
+          label: field.Beschriftung,
+          tooltip: field.LabelTooltip,
+          type: mapFieldType(field.Feldtyp),
+          id: field.Name
+        })),
+        columns: noOfColumns || null
+      }
+    };
+  }
+
+  function getFields() {
+    const groupToTakeFieldsFrom = importedGroup || originalGroup;
+    return groupToTakeFieldsFrom && groupToTakeFieldsFrom.Gruppentyp && groupToTakeFieldsFrom.Gruppentyp.Feldgruppe
+      && groupToTakeFieldsFrom.Gruppentyp.Feldgruppe.FeldList
+      && asArray(groupToTakeFieldsFrom.Gruppentyp.Feldgruppe.FeldList.Feld);
+  }
+
+  function getNoOfColumns() {
+    const groupToTakeNoOfColumnsFrom = importedGroup || originalGroup;
+    return groupToTakeNoOfColumnsFrom && groupToTakeNoOfColumnsFrom.Gruppentyp && groupToTakeNoOfColumnsFrom.Gruppentyp.Feldgruppe
+      && groupToTakeNoOfColumnsFrom.Gruppentyp.Feldgruppe.Spalten
+      && parseInt(groupToTakeNoOfColumnsFrom.Gruppentyp.Feldgruppe.Spalten, 10);
+  }
+}
+
+function mapTableGroup(originalGroup: Gruppe, importedGroup?: Gruppe): Group {
+  if (originalGroup) {
+    const tableColumns = getTableColumns();
+
+    return {
+      label: originalGroup.Beschriftung || (importedGroup && importedGroup.Beschriftung),
+      breakLine: !!(originalGroup.Umbruch && originalGroup.Umbruch === 'true'),
+      table: {
+        columns: tableColumns.map(column => ({
+          label: column.Beschriftung,
+          field: column.Name
+        }))
+      }
+    };
+  }
+
+  function getTableColumns() {
+    const groupToTakeTableColumnsFrom = importedGroup || originalGroup;
+    return groupToTakeTableColumnsFrom && groupToTakeTableColumnsFrom.Gruppentyp && groupToTakeTableColumnsFrom.Gruppentyp.Tabellengruppe
+      && groupToTakeTableColumnsFrom.Gruppentyp.Tabellengruppe.TabellenspalteList
+      && asArray(groupToTakeTableColumnsFrom.Gruppentyp.Tabellengruppe.TabellenspalteList.Tabellenspalte);
   }
 }
 

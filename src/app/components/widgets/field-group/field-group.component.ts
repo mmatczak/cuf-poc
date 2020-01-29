@@ -3,6 +3,7 @@ import {Field} from '../field/field.component';
 
 export interface FieldGroup {
   fields: Field[];
+  columns?: number;
 }
 
 @Component({
@@ -11,15 +12,19 @@ export interface FieldGroup {
   styleUrls: ['./field-group.component.scss']
 })
 export class FieldGroupComponent {
-  private _value: FieldGroup;
-
-  get value(): FieldGroup {
-    return this._value;
-  }
+  formRows: Field[][];
 
   @Input()
-  set value(value: FieldGroup) {
-    this._value = value;
+  set value(newFieldGroup: FieldGroup) {
+    if (newFieldGroup) {
+      const noOfFieldsInRow = newFieldGroup.columns ? Math.floor(newFieldGroup.columns / 2) : 3;
+      this.formRows = [];
+      if (newFieldGroup.fields) {
+        for (let startIndex = 0; startIndex < newFieldGroup.fields.length; startIndex += noOfFieldsInRow) {
+          this.formRows.push(newFieldGroup.fields.slice(startIndex, startIndex + noOfFieldsInRow));
+        }
+      }
+    }
   }
 
   constructor() { }

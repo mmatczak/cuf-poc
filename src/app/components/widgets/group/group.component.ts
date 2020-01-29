@@ -1,10 +1,12 @@
 import {Component, Input} from '@angular/core';
 import {FieldGroup} from '../field-group/field-group.component';
+import {Table} from '../table/table.component';
 
 export interface Group {
   label?: string;
   breakLine?: boolean;
-  fieldGroup: FieldGroup;
+  fieldGroup?: FieldGroup;
+  table?: Table;
 }
 
 @Component({

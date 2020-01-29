@@ -13,6 +13,8 @@ import {DialogRouteComponent} from './components/routes/dialog-route/dialog-rout
 import {TabRouteComponent} from './components/routes/tab-route/tab-route.component';
 import {HomeRouteComponent} from './components/routes/home-route/home-route.component';
 import {DialogRouteResolver} from './components/routes/dialog-route/dialog-route.resolver';
+import {AgGridModule} from 'ag-grid-angular';
+import {TableComponent} from './components/widgets/table/table.component';
 
 @NgModule({
   declarations: [
@@ -24,11 +26,13 @@ import {DialogRouteResolver} from './components/routes/dialog-route/dialog-route
     GroupContainerComponent,
     DialogRouteComponent,
     TabRouteComponent,
-    HomeRouteComponent
+    HomeRouteComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    AgGridModule.withComponents([]),
     RouterModule.forRoot([
       {path: '', redirectTo: '/', pathMatch: 'full'},
       {

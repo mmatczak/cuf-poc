@@ -8,18 +8,25 @@ export interface Gruppe {
 
 export interface Gruppentyp {
   Feldgruppe?: Feldgruppe;
-  Feldgruppenimport?: Feldgruppenimport;
-  Tabellengruppe?: any;
-  Tabellengruppenimport?: any;
+  Feldgruppenimport?: Gruppenimport;
+  Tabellengruppe?: Tabellengruppe;
+  Tabellengruppenimport?: Gruppenimport;
 }
 
-export interface Feldgruppenimport {
+export interface Gruppenimport {
   Gruppe: { '@ID': string };
 }
 
 export interface Feldgruppe {
   FeldList: {
     Feld: Feld | Feld[];
+  };
+  Spalten?: string;
+}
+
+export interface Tabellengruppe {
+  TabellenspalteList: {
+    Tabellenspalte: Tabellenspalte | Tabellenspalte[];
   };
 }
 
@@ -28,6 +35,11 @@ export interface Feld {
   Beschriftung: string;
   LabelTooltip?: string;
   Feldtyp: Feldtyp;
+}
+
+export interface Tabellenspalte {
+  Name: string;
+  Beschriftung: string;
 }
 
 export interface Feldtyp {

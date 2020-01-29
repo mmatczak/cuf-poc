@@ -1,0 +1,9 @@
+<button class="btn btn-outline-primary" (click)="addNew()">Neue Zeile Hinzufügen</button>
+<ag-grid-angular
+  class="ag-theme-balham"
+  [rowData]="rowData"
+  [columnDefs]="columnDefs"
+  [localeText]="{noRowsToShow: 'Es gibt keine Daten zum Anzeigen'}"
+  (gridReady)="onGridReady($event)"
+>
+</ag-grid-angular>
