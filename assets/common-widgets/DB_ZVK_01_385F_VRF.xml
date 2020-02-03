@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<Dialogbaustein ID="jmikosin/01.02.2016/12:21/335863">
+  <Name>DB_ZVK_01_385F_VRF</Name>
+  <Beschriftung>Dialogbaustein für PK_ZVK_01_385F</Beschriftung>
+  <Batchgenerierung>true</Batchgenerierung>
+  <TOAnwendung ID="jmikosin/01.02.2016/12:21/335871"/>
+  <KarteikarteList>
+    <Karteikarte>
+      <Name>DB_ZVK_01_385F</Name>
+      <Beschriftung>Zulagen nach Rentenbeginn</Beschriftung>
+      <GruppeList>
+        <Gruppe ID="jmikosin/01.02.2016/12:21/335858">
+          <Name>PK_ZVK_01_385F2</Name>
+          <Beschriftung>PK_ZVK_01_385F</Beschriftung>
+          <Gruppentyp>
+            <Feldgruppe>
+              <FeldList>
+                <Feld>
+                  <Name>PunkteGesamt</Name>
+                  <Beschriftung>Zulagen nach Rentenbeginn</Beschriftung>
+                  <LabelTooltip>Zulagen nach Rentenbeginn</LabelTooltip>
+                  <Feldtyp>
+                    <TextfeldEinzeilig>
+                      <Spalten>8</Spalten>
+                      <Format ID="Dezimalformat"/>
+                      <Ausrichtung>
+                        <Linksbuendig/>
+                      </Ausrichtung>
+                    </TextfeldEinzeilig>
+                  </Feldtyp>
+                  <TOZugriff ID="/pflichtVertrag/versicherter/PK_ZVK_01_385F"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.PunktesummeTO.punkteGesamtVerwendet"/>
+                  <Anzeige>true</Anzeige>
+                </Feld>
+              </FeldList>
+              <TOZugriff ID="/"/>
+              <Spalten>4</Spalten>
+            </Feldgruppe>
+          </Gruppentyp>
+          <Umbruch>true</Umbruch>
+        </Gruppe>
+      </GruppeList>
+    </Karteikarte>
+  </KarteikarteList>
+  <Dokumentation>
+  </Dokumentation>
+</Dialogbaustein>

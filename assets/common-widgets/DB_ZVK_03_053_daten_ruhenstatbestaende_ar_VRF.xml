@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<Dialogbaustein ID="jmikosin/01.02.2016/12:53/428232">
+  <Name>DB_ZVK_03_053_daten_ruhenstatbestaende_ar_VRF</Name>
+  <Batchgenerierung>true</Batchgenerierung>
+  <TOAnwendung ID="jmikosin/01.02.2016/12:53/428244"/>
+  <KarteikarteList>
+    <Karteikarte>
+      <Name>DB_ZVK_03_053_01_daten_ruhenstatbestaende_ar</Name>
+      <Beschriftung>DB_ZVK_03_053_01_daten_ruhenstatbestaende_ar</Beschriftung>
+      <GruppeList>
+        <Gruppe ID="jmikosin/01.02.2016/12:53/428226">
+          <Name>Ruhenstatbestaende_R_AR_VRF</Name>
+          <Beschriftung>Ruhenstatbestände - R AR</Beschriftung>
+          <Gruppentyp>
+            <Feldgruppe>
+              <FeldList>
+                <Feld>
+                  <Name>grundbetrag</Name>
+                  <Beschriftung>Rente vor Ruhen</Beschriftung>
+                  <LabelTooltip>Rente vor Ruhen</LabelTooltip>
+                  <Feldtyp>
+                    <TextfeldEinzeilig>
+                      <Spalten>8</Spalten>
+                      <Format ID="Geldbetrag-Format"/>
+                      <Ausrichtung>
+                        <Linksbuendig/>
+                      </Ausrichtung>
+                    </TextfeldEinzeilig>
+                  </Feldtyp>
+                  <TOZugriff ID="/pflichtVertrag/versicherter/PK_ZVK_01_766F"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.RenteNachRuhenTO.grundbetrag"/>
+                  <Anzeige>true</Anzeige>
+                  <HilfeText><![CDATA[Basis, auf die das Ruhen wirkt.]]></HilfeText>
+                </Feld>
+                <Feld>
+                  <Name>ruhenstatbestand</Name>
+                  <Beschriftung>Ruhenstatbestand</Beschriftung>
+                  <LabelTooltip>Grund des Ruhens</LabelTooltip>
+                  <Feldtyp>
+                    <Combobox>
+                      <Filterklasse>ch.forumedia.futura.client.zvk.vtg.RentnerARRuhenNichtZahlenCodeFilter</Filterklasse>
+                    </Combobox>
+                  </Feldtyp>
+                  <TOZugriff ID="/pflichtVertrag/versicherter/PK_ZVK_01_766F"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.RenteNachRuhenTO.ruhenstatbestand"/>
+                  <Anzeige>true</Anzeige>
+                  <Bearbeitbar>true</Bearbeitbar>
+                  <Mussfeld>true</Mussfeld>
+                  <HilfeText><![CDATA[Der Ruhenstatbestand kennzeichnet den Grund für das Ruhen.]]></HilfeText>
+                </Feld>
+                <Feld>
+                  <Name>FlexiRentevorHinzuverdienst</Name>
+                  <Beschriftung>FlexiRente: DRV vor Hinzuverdienst</Beschriftung>
+                  <Feldtyp>
+                    <TextfeldEinzeilig>
+                      <Spalten>8</Spalten>
+                      <Format ID="Dezimalformat"/>
+                      <Ausrichtung>
+                        <Linksbuendig/>
+                      </Ausrichtung>
+                    </TextfeldEinzeilig>
+                  </Feldtyp>
+                  <TOZugriff ID="/pflichtVertrag/versicherter/PK_ZVK_01_745F"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.plf.vtg.BetragswertTO.endbetragEingabe"/>
+                  <Anzeige>true</Anzeige>
+                  <Bearbeitbar>true</Bearbeitbar>
+                </Feld>
+                <Feld>
+                  <Name>kuerzungsbetrag</Name>
+                  <Beschriftung>Ruhensbetrag Eingabe</Beschriftung>
+                  <LabelTooltip>Vom Sachbearbeiter eingegebener Wert</LabelTooltip>
+                  <Feldtyp>
+                    <TextfeldEinzeilig>
+                      <Spalten>8</Spalten>
+                      <Format ID="Geldbetrag-Format"/>
+                      <Ausrichtung>
+                        <Linksbuendig/>
+                      </Ausrichtung>
+                    </TextfeldEinzeilig>
+                  </Feldtyp>
+                  <TOZugriff ID="/pflichtVertrag/versicherter/PK_ZVK_01_766F"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.RenteNachRuhenTO.kuerzungsbetrag2"/>
+                  <Anzeige>true</Anzeige>
+                  <Bearbeitbar>true</Bearbeitbar>
+                  <HilfeText><![CDATA[Dieses Feld enthält den vom Sachbearbeiter eingegebenen Kürzungsbetrag.]]></HilfeText>
+                </Feld>
+                <Feld>
+                  <Name>kuerzungsbetrag2</Name>
+                  <Beschriftung>Ruhensbetrag Berechnet</Beschriftung>
+                  <LabelTooltip>Wert ohne Berücksichtigung der Mindestrente</LabelTooltip>
+                  <Feldtyp>
+                    <TextfeldEinzeilig>
+                      <Spalten>8</Spalten>
+                      <Format ID="Geldbetrag-Format"/>
+                      <Ausrichtung>
+                        <Linksbuendig/>
+                      </Ausrichtung>
+                    </TextfeldEinzeilig>
+                  </Feldtyp>
+                  <TOZugriff ID="/pflichtVertrag/versicherter/PK_ZVK_01_766F"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.RenteNachRuhenTO.kuerzungsbetrag"/>
+                  <Anzeige>true</Anzeige>
+                  <HilfeText><![CDATA[Dieses Feld beinhaltet den berechneten und verwendeten Kürzungsbetrag.]]></HilfeText>
+                </Feld>
+                <Feld>
+                  <Name>FlexiRenteNachHinzuverdienst</Name>
+                  <Beschriftung>FlexiRente: DRV nach Hinzuverdienst</Beschriftung>
+                  <Feldtyp>
+                    <TextfeldEinzeilig>
+                      <Spalten>8</Spalten>
+                      <Format ID="Dezimalformat"/>
+                      <Ausrichtung>
+                        <Linksbuendig/>
+                      </Ausrichtung>
+                    </TextfeldEinzeilig>
+                  </Feldtyp>
+                  <TOZugriff ID="/pflichtVertrag/versicherter/PK_ZVK_01_746F"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.plf.vtg.BetragswertTO.endbetragEingabe"/>
+                  <Anzeige>true</Anzeige>
+                  <Bearbeitbar>true</Bearbeitbar>
+                </Feld>
+                <Feld>
+                  <Name>endbetragBerechnet</Name>
+                  <Beschriftung>Rente nach Ruhen</Beschriftung>
+                  <LabelTooltip>Rente unter Berücksichtigung des Ruhens, aber ohne Berücksichtigung der Mindestrente</LabelTooltip>
+                  <Feldtyp>
+                    <TextfeldEinzeilig>
+                      <Spalten>8</Spalten>
+                      <Format ID="Geldbetrag-Format"/>
+                      <Ausrichtung>
+                        <Linksbuendig/>
+                      </Ausrichtung>
+                    </TextfeldEinzeilig>
+                  </Feldtyp>
+                  <TOZugriff ID="/pflichtVertrag/versicherter/PK_ZVK_01_766F"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.RenteNachRuhenTO.endbetragBerechnet"/>
+                  <Anzeige>true</Anzeige>
+                  <HilfeText><![CDATA[Der Rentenbetrag nach der Berücksichtigung von Ruhenstatbeständen]]></HilfeText>
+                </Feld>
+                <Feld>
+                  <Name>endbetragVerwendet</Name>
+                  <Beschriftung>Rente nach Mindestrente</Beschriftung>
+                  <LabelTooltip>Rente unter Berücksichtigung der Mindestrente</LabelTooltip>
+                  <Feldtyp>
+                    <TextfeldEinzeilig>
+                      <Spalten>8</Spalten>
+                      <Format ID="Geldbetrag-Format"/>
+                      <Ausrichtung>
+                        <Linksbuendig/>
+                      </Ausrichtung>
+                    </TextfeldEinzeilig>
+                  </Feldtyp>
+                  <TOZugriff ID="/pflichtVertrag/versicherter/PK_ZVK_01_766F"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.RenteNachRuhenTO.endbetragVerwendet"/>
+                  <Anzeige>true</Anzeige>
+                  <HilfeText><![CDATA[Der Rentenbetrag nach der Berücksichtigung von Ruhenstatbeständen und Mindestrente]]></HilfeText>
+                </Feld>
+                <Feld>
+                  <Name>FlexiRenteZahlenderAnteil</Name>
+                  <Beschriftung>FlexiRente: Zu zahlender Anteil %</Beschriftung>
+                  <Feldtyp>
+                    <TextfeldEinzeilig>
+                      <Spalten>8</Spalten>
+                      <Format ID="FaktorMit3Nachkommastellen-Format"/>
+                      <Ausrichtung>
+                        <Linksbuendig/>
+                      </Ausrichtung>
+                    </TextfeldEinzeilig>
+                  </Feldtyp>
+                  <TOZugriff ID="/pflichtVertrag/versicherter/PK_ZVK_01_747F"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.plf.vtg.BetragswertTO.endbetragVerwendet"/>
+                  <Anzeige>true</Anzeige>
+                </Feld>
+              </FeldList>
+              <TOZugriff ID="/"/>
+              <Spalten>6</Spalten>
+              <FeldgruppenNeuOption>
+                <OhneNeuaufnahme/>
+              </FeldgruppenNeuOption>
+              <FeldgruppenEntfernenOption>
+                <OhneEntfernen/>
+              </FeldgruppenEntfernenOption>
+              <Auskunftsoption>
+                <OhneAuskunft/>
+              </Auskunftsoption>
+              <Suchoption>
+                <OhneSuche/>
+              </Suchoption>
+            </Feldgruppe>
+          </Gruppentyp>
+          <Umbruch>true</Umbruch>
+        </Gruppe>
+      </GruppeList>
+    </Karteikarte>
+  </KarteikarteList>
+  <Dokumentation>
+    <ErzeugtVon>plochars</ErzeugtVon>
+    <Erzeugungsdatum>03.08.2004/09:06</Erzeugungsdatum>
+  </Dokumentation>
+</Dialogbaustein>

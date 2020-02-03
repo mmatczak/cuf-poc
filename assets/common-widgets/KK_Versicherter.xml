@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<Dialogbaustein ID="aschob/08.03.2004/02:03/136829">
+  <Name>KK_Versicherter</Name>
+  <Beschriftung>Versicherter</Beschriftung>
+  <TOAnwendung ID="aschob/08.03.2004/02:02/135651"/>
+  <KarteikarteList>
+    <Karteikarte>
+      <Name>KK_Versicherter</Name>
+      <Beschriftung>KK_Versicherter</Beschriftung>
+      <GruppeList>
+        <Gruppe ID="aschob/08.03.2004/02:03/136903">
+          <Name>Kopfkarte</Name>
+          <Beschriftung>Versicherter</Beschriftung>
+          <Gruppentyp>
+            <Feldgruppe>
+              <FeldList>
+                <Feld>
+                  <Name>versicherungsnummer</Name>
+                  <Beschriftung>Vers.-Nr.</Beschriftung>
+                  <LabelTooltip>Versicherungsnummer</LabelTooltip>
+                  <Feldtyp>
+                    <TextfeldEinzeilig>
+                      <Spalten>10</Spalten>
+                    </TextfeldEinzeilig>
+                  </Feldtyp>
+                  <TOZugriff ID="/versorgungsverhaeltnisZvk"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.VersorgungsverhaeltnisZvkTO.versicherungsnummer"/>
+                  <Anzeige>true</Anzeige>
+                  <HilfeText><![CDATA[Die Versicherungsnummer des Versicherten]]></HilfeText>
+                </Feld>
+                <Feld>
+                  <Name>nameAnzeige</Name>
+                  <Beschriftung>Name</Beschriftung>
+                  <LabelTooltip>Name</LabelTooltip>
+                  <Feldtyp>
+                    <TextfeldEinzeilig>
+                      <Spalten>25</Spalten>
+                      <Ausrichtung>
+                        <Linksbuendig/>
+                      </Ausrichtung>
+                    </TextfeldEinzeilig>
+                  </Feldtyp>
+                  <TOZugriff ID="/"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.par.PersonZvkTO.nameAnzeige"/>
+                  <Anzeige>true</Anzeige>
+                  <HilfeText><![CDATA[Der vollständige Name des Versicherten]]></HilfeText>
+                </Feld>
+                <Feld>
+                  <Name>geburtsdatum</Name>
+                  <Beschriftung>Geb.-Datum</Beschriftung>
+                  <LabelTooltip>Geburtsdatum</LabelTooltip>
+                  <Feldtyp>
+                    <TextfeldEinzeilig>
+                      <Min>01.01.1800</Min>
+                      <Spalten>8</Spalten>
+                      <Format ID="Geburtsdatumformat"/>
+                      <Ausrichtung>
+                        <Linksbuendig/>
+                      </Ausrichtung>
+                    </TextfeldEinzeilig>
+                  </Feldtyp>
+                  <TOZugriff ID="/"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.par.PersonZvkTO.geburtsdatum"/>
+                  <Anzeige>true</Anzeige>
+                  <HilfeText><![CDATA[Das Geburtsdatum des Versicherten]]></HilfeText>
+                </Feld>
+              </FeldList>
+              <TOZugriff ID="/"/>
+              <Spalten>6</Spalten>
+            </Feldgruppe>
+          </Gruppentyp>
+          <Umbruch>true</Umbruch>
+        </Gruppe>
+      </GruppeList>
+    </Karteikarte>
+  </KarteikarteList>
+  <Dokumentation>
+    <ErzeugtVon>aschob</ErzeugtVon>
+    <Erzeugungsdatum>08.03.2004/02:03</Erzeugungsdatum>
+  </Dokumentation>
+</Dialogbaustein>

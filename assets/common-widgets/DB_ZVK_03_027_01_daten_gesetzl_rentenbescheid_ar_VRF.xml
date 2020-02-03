@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<Dialogbaustein ID="jmikosin/29.01.2016/10:40/325446">
+  <Name>DB_ZVK_03_027_01_daten_gesetzl_rentenbescheid_ar_VRF</Name>
+  <Batchgenerierung>true</Batchgenerierung>
+  <MappingDateiErzeugen>true</MappingDateiErzeugen>
+  <TOAnwendung ID="jmikosin/29.01.2016/10:40/325483"/>
+  <KarteikarteList>
+    <Karteikarte>
+      <Name>Dummy-Karte</Name>
+      <Beschriftung>Dummy-Karte</Beschriftung>
+      <GruppeList>
+        <Gruppe ID="jmikosin/29.01.2016/10:40/325433">
+          <Name>versicherungstraeger</Name>
+          <Beschriftung>Rentenversicherungsträger</Beschriftung>
+          <Gruppentyp>
+            <Feldgruppe>
+              <FeldList>
+                <Feld>
+                  <Name>nummerAnzeige</Name>
+                  <Beschriftung>Rentenvers. Nr.</Beschriftung>
+                  <LabelTooltip>Rentenvers. Nr.</LabelTooltip>
+                  <Feldtyp>
+                    <TextfeldEinzeilig>
+                      <Spalten>20</Spalten>
+                      <Ausrichtung>
+                        <Linksbuendig/>
+                      </Ausrichtung>
+                    </TextfeldEinzeilig>
+                  </Feldtyp>
+                  <TOZugriff ID="/"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.RenteZvkTO.rentenversicherungsnr"/>
+                  <Anzeige>true</Anzeige>
+                  <Bearbeitbar>true</Bearbeitbar>
+                </Feld>
+                <Feld>
+                  <Name>gesetzlRentenversichertKnz</Name>
+                  <Beschriftung>Anspruch gesetzl. Rente</Beschriftung>
+                  <LabelTooltip>Besteht ein Anspruch auf gesetzliche Rente</LabelTooltip>
+                  <Feldtyp>
+                    <Checkbox>
+                    </Checkbox>
+                  </Feldtyp>
+                  <TOZugriff ID="/"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.RenteZvkTO.gesetzlRentenversichertKnz"/>
+                  <Anzeige>true</Anzeige>
+                  <Bearbeitbar>true</Bearbeitbar>
+                </Feld>
+                <Feld>
+                  <Name>ravStatus</Name>
+                  <Beschriftung>RAV-Knz.</Beschriftung>
+                  <Feldtyp>
+                    <Combobox>
+                    </Combobox>
+                  </Feldtyp>
+                  <TOZugriff ID="/"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.RenteZvkTO.ravStatus"/>
+                  <Anzeige>true</Anzeige>
+                  <Bearbeitbar>true</Bearbeitbar>
+                </Feld>
+              </FeldList>
+              <TOZugriff ID="/pflichtRolle/partner/versicherungstraeger/versicherer"/>
+              <Spalten>4</Spalten>
+              <Suchoption>
+                <OhneSuche/>
+              </Suchoption>
+            </Feldgruppe>
+          </Gruppentyp>
+          <Umbruch>true</Umbruch>
+        </Gruppe>
+      </GruppeList>
+    </Karteikarte>
+  </KarteikarteList>
+  <Dokumentation>
+    <ErzeugtVon>schall</ErzeugtVon>
+    <Erzeugungsdatum>07.06.2004/06:53</Erzeugungsdatum>
+  </Dokumentation>
+</Dialogbaustein>

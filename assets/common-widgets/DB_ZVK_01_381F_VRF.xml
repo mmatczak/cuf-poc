@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<Dialogbaustein ID="jmikosin/01.02.2016/10:56/278130">
+  <Name>DB_ZVK_01_381F_VRF</Name>
+  <Beschriftung>Dialogbaustein für PK_ZVK_01_381F</Beschriftung>
+  <Batchgenerierung>true</Batchgenerierung>
+  <TOAnwendung ID="jmikosin/01.02.2016/10:56/278138"/>
+  <KarteikarteList>
+    <Karteikarte>
+      <Name>DB_ZVK_01_381F</Name>
+      <Beschriftung>Punkte gesamt als Rentenleistung</Beschriftung>
+      <GruppeList>
+        <Gruppe ID="jmikosin/01.02.2016/10:56/278083">
+          <Name>V1Gesamtpunkte</Name>
+          <Beschriftung>V1 - Versorgungspunkte</Beschriftung>
+          <Gruppentyp>
+            <Feldgruppe>
+              <FeldList>
+                <Feld>
+                  <Name>punkteGesamtVerwendet</Name>
+                  <Beschriftung>Gesamtpunkte</Beschriftung>
+                  <LabelTooltip>Versorgungspunkte gesamt</LabelTooltip>
+                  <Feldtyp>
+                    <TextfeldEinzeilig>
+                      <Spalten>8</Spalten>
+                      <Format ID="Geldbetrag-Format"/>
+                      <Ausrichtung>
+                        <Linksbuendig/>
+                      </Ausrichtung>
+                    </TextfeldEinzeilig>
+                  </Feldtyp>
+                  <TOZugriff ID="/pflichtVertrag/versicherter/PK_ZVK_01_381F"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.PunktesummeTO.punkteGesamtVerwendet"/>
+                  <Anzeige>true</Anzeige>
+                  <HilfeText><![CDATA[Enthält die Summe aller Punkte aus der Pflichtversicherung.]]></HilfeText>
+                </Feld>
+                <Feld>
+                  <Name>punkteKvPvZb</Name>
+                  <Beschriftung>Gesamtpunkte KV/PV/ZB pflichtig</Beschriftung>
+                  <LabelTooltip>KV/PV/ZB - freie Punkte aus Pflichtversicherung</LabelTooltip>
+                  <Feldtyp>
+                    <TextfeldEinzeilig>
+                      <Spalten>8</Spalten>
+                      <Format ID="Geldbetrag-Format"/>
+                      <Ausrichtung>
+                        <Linksbuendig/>
+                      </Ausrichtung>
+                    </TextfeldEinzeilig>
+                  </Feldtyp>
+                  <TOZugriff ID="/pflichtVertrag/versicherter/PK_ZVK_01_381F"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.PunktesummeTO.punkteKrkPflichtig"/>
+                  <Anzeige>true</Anzeige>
+                </Feld>
+              </FeldList>
+              <TOZugriff ID="/"/>
+              <Spalten>4</Spalten>
+            </Feldgruppe>
+          </Gruppentyp>
+          <Umbruch>true</Umbruch>
+        </Gruppe>
+        <Gruppe ID="jmikosin/01.02.2016/10:56/278107">
+          <Name>AVIpunkte</Name>
+          <Beschriftung>AVI Punkte</Beschriftung>
+          <Gruppentyp>
+            <Feldgruppe>
+              <FeldList>
+                <Feld>
+                  <Name>punkteUSteuerE</Name>
+                  <Beschriftung>Punkte U/E-Anteil</Beschriftung>
+                  <LabelTooltip>Punkte aus Umlage bei der Pflichtversicherung (mit Ertragsanteil zu versteuern)</LabelTooltip>
+                  <Feldtyp>
+                    <TextfeldEinzeilig>
+                      <Spalten>8</Spalten>
+                      <Format ID="Geldbetrag-Format"/>
+                      <Ausrichtung>
+                        <Linksbuendig/>
+                      </Ausrichtung>
+                    </TextfeldEinzeilig>
+                  </Feldtyp>
+                  <TOZugriff ID="/pflichtVertrag/versicherter/PK_ZVK_01_381F"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.PunktesummeTO.punkteUSteuerE"/>
+                  <Anzeige>true</Anzeige>
+                  <HilfeText><![CDATA[Enthält die Punkte aus der Umlage bei Abrechnungsverband I.]]></HilfeText>
+                </Feld>
+                <Feld>
+                  <Name>punkteUSteuerV</Name>
+                  <Beschriftung>Punkte U/V-Anteil</Beschriftung>
+                  <LabelTooltip>Punkte aus Umlage bei der Pflichtversicherung (voll zu versteuern)</LabelTooltip>
+                  <Feldtyp>
+                    <TextfeldEinzeilig>
+                      <Spalten>8</Spalten>
+                      <Format ID="Geldbetrag-Format"/>
+                      <Ausrichtung>
+                        <Linksbuendig/>
+                      </Ausrichtung>
+                    </TextfeldEinzeilig>
+                  </Feldtyp>
+                  <TOZugriff ID="/pflichtVertrag/versicherter/PK_ZVK_01_381F"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.PunktesummeTO.punkteUSteuerV"/>
+                  <Anzeige>true</Anzeige>
+                  <HilfeText><![CDATA[Enthält die Punkte aus der Umlage bei Abrechnungsverband I.]]></HilfeText>
+                </Feld>
+                <Feld>
+                  <Name>punkteB1SteuerE</Name>
+                  <Beschriftung>Punkte B/E-Anteil</Beschriftung>
+                  <LabelTooltip>Punkte aus Zusatzbeitrag bei der Pflichtversicherung (mit Ertragsanteil zu versteuern)</LabelTooltip>
+                  <Feldtyp>
+                    <TextfeldEinzeilig>
+                      <Spalten>8</Spalten>
+                      <Format ID="Geldbetrag-Format"/>
+                      <Ausrichtung>
+                        <Linksbuendig/>
+                      </Ausrichtung>
+                    </TextfeldEinzeilig>
+                  </Feldtyp>
+                  <TOZugriff ID="/pflichtVertrag/versicherter/PK_ZVK_01_381F"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.PunktesummeTO.punkteB1SteuerE"/>
+                  <Anzeige>true</Anzeige>
+                  <HilfeText><![CDATA[Enthält die Punkte aus dem Zusatzbeitrag bei Abrechnungsverband I (mit Ertragsanteil zu versteuern)]]></HilfeText>
+                </Feld>
+                <Feld>
+                  <Name>punkteB1SteuerV</Name>
+                  <Beschriftung>Punkte B/V-Anteil</Beschriftung>
+                  <LabelTooltip>Punkte aus Zusatzbeitrag bei der Pflichtversicherung (voll zu versteuern)</LabelTooltip>
+                  <Feldtyp>
+                    <TextfeldEinzeilig>
+                      <Spalten>8</Spalten>
+                      <Format ID="Geldbetrag-Format"/>
+                      <Ausrichtung>
+                        <Linksbuendig/>
+                      </Ausrichtung>
+                    </TextfeldEinzeilig>
+                  </Feldtyp>
+                  <TOZugriff ID="/pflichtVertrag/versicherter/PK_ZVK_01_381F"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.PunktesummeTO.punkteB1SteuerV"/>
+                  <Anzeige>true</Anzeige>
+                  <HilfeText><![CDATA[Enthält die Punkte aus dem Zusatzbeitrag bei Abrechnungsverband I (voll zu versteuern).]]></HilfeText>
+                </Feld>
+                <Feld>
+                  <Name>punkteEigenB1SteuerE</Name>
+                  <Beschriftung>Punkte Eigen B/E</Beschriftung>
+                  <Feldtyp>
+                    <TextfeldEinzeilig>
+                      <Spalten>8</Spalten>
+                      <Format ID="Geldbetrag-Format"/>
+                      <Ausrichtung>
+                        <Linksbuendig/>
+                      </Ausrichtung>
+                    </TextfeldEinzeilig>
+                  </Feldtyp>
+                  <TOZugriff ID="/pflichtVertrag/versicherter/PK_ZVK_01_381F"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.PunktesummeTO.punkteEigenB1SteuerE"/>
+                  <Anzeige>true</Anzeige>
+                </Feld>
+                <Feld>
+                  <Name>punkteEigenB1SteuerV</Name>
+                  <Beschriftung>Punkte Eigen B/V</Beschriftung>
+                  <Feldtyp>
+                    <TextfeldEinzeilig>
+                      <Spalten>8</Spalten>
+                      <Format ID="Geldbetrag-Format"/>
+                      <Ausrichtung>
+                        <Linksbuendig/>
+                      </Ausrichtung>
+                    </TextfeldEinzeilig>
+                  </Feldtyp>
+                  <TOZugriff ID="/pflichtVertrag/versicherter/PK_ZVK_01_381F"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.PunktesummeTO.punkteEigenB1SteuerV"/>
+                  <Anzeige>true</Anzeige>
+                </Feld>
+                <Feld>
+                  <Name>leerfeld</Name>
+                  <Anzeige>true</Anzeige>
+                </Feld>
+                <Feld>
+                  <Name>punkteZulageB1SteuerV</Name>
+                  <Beschriftung>Punkte Zulage B/V</Beschriftung>
+                  <LabelTooltip>Zulagepunkte bei der Pflichtversicherung (voll zu versteuern).</LabelTooltip>
+                  <Feldtyp>
+                    <TextfeldEinzeilig>
+                      <Spalten>8</Spalten>
+                      <Format ID="Geldbetrag-Format"/>
+                      <Ausrichtung>
+                        <Linksbuendig/>
+                      </Ausrichtung>
+                    </TextfeldEinzeilig>
+                  </Feldtyp>
+                  <TOZugriff ID="/pflichtVertrag/versicherter/PK_ZVK_01_381F"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.PunktesummeTO.punkteZulageB1SteuerV"/>
+                  <Anzeige>true</Anzeige>
+                  <HilfeText><![CDATA[Enthält die Zulagepunkte bei Abrechnungsverband I (voll zu versteuern).]]></HilfeText>
+                </Feld>
+              </FeldList>
+              <TOZugriff ID="/"/>
+              <Spalten>4</Spalten>
+            </Feldgruppe>
+          </Gruppentyp>
+          <Umbruch>true</Umbruch>
+        </Gruppe>
+        <Gruppe ID="jmikosin/01.02.2016/10:56/278125">
+          <Name>AVIIpunkte</Name>
+          <Beschriftung>AVII Punkte</Beschriftung>
+          <Gruppentyp>
+            <Feldgruppe>
+              <FeldList>
+                <Feld>
+                  <Name>punkteB2SteuerE</Name>
+                  <Beschriftung>Punkte B/E-Anteil</Beschriftung>
+                  <LabelTooltip>Punkte aus Beitrag bei Abrechnungsverband II (mit Ertragsanteil zu versteuern)</LabelTooltip>
+                  <Feldtyp>
+                    <TextfeldEinzeilig>
+                      <Spalten>8</Spalten>
+                      <Format ID="Geldbetrag-Format"/>
+                      <Ausrichtung>
+                        <Linksbuendig/>
+                      </Ausrichtung>
+                    </TextfeldEinzeilig>
+                  </Feldtyp>
+                  <TOZugriff ID="/pflichtVertrag/versicherter/PK_ZVK_01_381F"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.PunktesummeTO.punkteB2SteuerE"/>
+                  <Anzeige>true</Anzeige>
+                  <HilfeText><![CDATA[Enthält die Punkte aus dem Beitrag bei Abrechnungsverband II (mit Ertragsanteil zu versteuern).]]></HilfeText>
+                </Feld>
+                <Feld>
+                  <Name>punkteB2SteuerV</Name>
+                  <Beschriftung>Punkte B/V-Anteil</Beschriftung>
+                  <LabelTooltip>Punkte aus Beitrag bei Abrechnungsverband II (voll zu versteuern)</LabelTooltip>
+                  <Feldtyp>
+                    <TextfeldEinzeilig>
+                      <Spalten>8</Spalten>
+                      <Format ID="Geldbetrag-Format"/>
+                      <Ausrichtung>
+                        <Linksbuendig/>
+                      </Ausrichtung>
+                    </TextfeldEinzeilig>
+                  </Feldtyp>
+                  <TOZugriff ID="/pflichtVertrag/versicherter/PK_ZVK_01_381F"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.PunktesummeTO.punkteB2SteuerV"/>
+                  <Anzeige>true</Anzeige>
+                  <HilfeText><![CDATA[Enthält die Punkte aus dem Beitrag bei Abrechnungsverband II (voll zu versteuern)]]></HilfeText>
+                </Feld>
+                <Feld>
+                  <Name>punkteEigenB2StuerE</Name>
+                  <Beschriftung>Punkte Eigen B/E</Beschriftung>
+                  <Feldtyp>
+                    <TextfeldEinzeilig>
+                      <Spalten>8</Spalten>
+                      <Format ID="Geldbetrag-Format"/>
+                      <Ausrichtung>
+                        <Linksbuendig/>
+                      </Ausrichtung>
+                    </TextfeldEinzeilig>
+                  </Feldtyp>
+                  <TOZugriff ID="/pflichtVertrag/versicherter/PK_ZVK_01_381F"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.PunktesummeTO.punkteEigenB2SteuerE"/>
+                  <Anzeige>true</Anzeige>
+                </Feld>
+                <Feld>
+                  <Name>punkteEigenB2StuerV</Name>
+                  <Beschriftung>Punkte Eigen B/V</Beschriftung>
+                  <Feldtyp>
+                    <TextfeldEinzeilig>
+                      <Spalten>8</Spalten>
+                      <Format ID="Geldbetrag-Format"/>
+                      <Ausrichtung>
+                        <Linksbuendig/>
+                      </Ausrichtung>
+                    </TextfeldEinzeilig>
+                  </Feldtyp>
+                  <TOZugriff ID="/pflichtVertrag/versicherter/PK_ZVK_01_381F"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.PunktesummeTO.punkteEigenB2SteuerV"/>
+                  <Anzeige>true</Anzeige>
+                </Feld>
+                <Feld>
+                  <Name>leerfeld3</Name>
+                  <Anzeige>true</Anzeige>
+                </Feld>
+                <Feld>
+                  <Name>punkteZulageB2SteuerV</Name>
+                  <Beschriftung>Punkte Zulage B/V</Beschriftung>
+                  <LabelTooltip>Zulagepunkte bei der Pflichtversicherung (voll zu versteuern).</LabelTooltip>
+                  <Feldtyp>
+                    <TextfeldEinzeilig>
+                      <Spalten>8</Spalten>
+                      <Format ID="Geldbetrag-Format"/>
+                      <Ausrichtung>
+                        <Linksbuendig/>
+                      </Ausrichtung>
+                    </TextfeldEinzeilig>
+                  </Feldtyp>
+                  <TOZugriff ID="/pflichtVertrag/versicherter/PK_ZVK_01_381F"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.PunktesummeTO.punkteZulageB2SteuerV"/>
+                  <Anzeige>true</Anzeige>
+                  <HilfeText><![CDATA[Enthält die Zulagepunkte bei Abrechnungsverband II (voll zu versteuern).]]></HilfeText>
+                </Feld>
+              </FeldList>
+              <TOZugriff ID="/"/>
+              <Spalten>4</Spalten>
+            </Feldgruppe>
+          </Gruppentyp>
+          <Umbruch>true</Umbruch>
+        </Gruppe>
+      </GruppeList>
+    </Karteikarte>
+  </KarteikarteList>
+  <Dokumentation>
+    <ErzeugtVon>pgrzybow</ErzeugtVon>
+    <Erzeugungsdatum>22.11.2007/02:49</Erzeugungsdatum>
+  </Dokumentation>
+</Dialogbaustein>

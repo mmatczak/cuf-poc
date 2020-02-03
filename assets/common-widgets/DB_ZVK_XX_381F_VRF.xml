@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<Dialogbaustein ID="RSKIBA/28.03.2018/11:20/216446">
+  <Name>DB_ZVK_XX_381F_VRF</Name>
+  <Beschriftung>Dialogbaustein für PK_ZVK_01_381F</Beschriftung>
+  <Batchgenerierung>true</Batchgenerierung>
+  <TOAnwendung ID="RSKIBA/28.03.2018/11:20/216467"/>
+  <KarteikarteList>
+    <Karteikarte>
+      <Name>DB_ZVK_XX_381F</Name>
+      <Beschriftung>Punkte gesamt als Rentenleistung</Beschriftung>
+      <GruppeList>
+        <Gruppe ID="RSKIBA/28.03.2018/12:17/216567">
+          <Name>VersorgungspunkteV2_V5</Name>
+          <Beschriftung>Versorgungspunkte V2-V5</Beschriftung>
+          <Gruppentyp>
+            <Tabellengruppe>
+              <TOZugriff ID="/freiwilligeVertraege"/>
+              <TabellenspalteList>
+                <Tabellenspalte ID="RSKIBA/28.03.2018/12:26/215656">
+                  <Name>vertragsNr</Name>
+                  <Beschriftung>Vertragsnummer</Beschriftung>
+                  <Spaltentyp>
+                    <TextfeldEinzeilig>
+                    </TextfeldEinzeilig>
+                  </Spaltentyp>
+                  <TOZugriff ID="/vertrag"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.VersichertenvertragZvkTO.vertragsNr"/>
+                  <Anzeige>true</Anzeige>
+                  <Ausrichtung>
+                    <Linksbuendig/>
+                  </Ausrichtung>
+                  <Sortierung>
+                    <OhneComparatorKlasse/>
+                  </Sortierung>
+                </Tabellenspalte>
+                <Tabellenspalte ID="RSKIBA/28.03.2018/12:28/215724">
+                  <Name>vertragsart</Name>
+                  <Beschriftung>Vertragsart</Beschriftung>
+                  <Spaltentyp>
+                    <TextfeldEinzeilig>
+                    </TextfeldEinzeilig>
+                  </Spaltentyp>
+                  <TOZugriff ID="/vertrag"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.VersichertenvertragZvkTO.vertragsart"/>
+                  <Anzeige>true</Anzeige>
+                  <Ausrichtung>
+                    <Linksbuendig/>
+                  </Ausrichtung>
+                  <Sortierung>
+                    <OhneComparatorKlasse/>
+                  </Sortierung>
+                </Tabellenspalte>
+                <Tabellenspalte ID="RSKIBA/28.03.2018/12:30/215725">
+                  <Name>punkteB3R1SteuerE</Name>
+                  <Beschriftung>R1 E-Ant</Beschriftung>
+                  <Spaltentyp>
+                    <TextfeldEinzeilig>
+                      <Min>2</Min>
+                      <Max>2</Max>
+                      <Format ID="Geldbetrag-Format"/>
+                    </TextfeldEinzeilig>
+                  </Spaltentyp>
+                  <TOZugriff ID="/vertrag/versicherter/PK_ZVK_99_381F"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.PunktesummeTO.punkteB3R1SteuerE"/>
+                  <Anzeige>true</Anzeige>
+                  <Ausrichtung>
+                    <Rechtsbuendig/>
+                  </Ausrichtung>
+                  <Sortierung>
+                    <OhneComparatorKlasse/>
+                  </Sortierung>
+                </Tabellenspalte>
+                <Tabellenspalte ID="RSKIBA/28.03.2018/12:31/215726">
+                  <Name>punkteB3R1SteuerV</Name>
+                  <Beschriftung>R1 V-Ant</Beschriftung>
+                  <Spaltentyp>
+                    <TextfeldEinzeilig>
+                      <Min>2</Min>
+                      <Max>2</Max>
+                      <Format ID="Geldbetrag-Format"/>
+                    </TextfeldEinzeilig>
+                  </Spaltentyp>
+                  <TOZugriff ID="/vertrag/versicherter/PK_ZVK_99_381F"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.PunktesummeTO.punkteB3R1SteuerV"/>
+                  <Anzeige>true</Anzeige>
+                  <Ausrichtung>
+                    <Rechtsbuendig/>
+                  </Ausrichtung>
+                  <Sortierung>
+                    <OhneComparatorKlasse/>
+                  </Sortierung>
+                </Tabellenspalte>
+                <Tabellenspalte ID="RSKIBA/28.03.2018/12:32/215728">
+                  <Name>punkteB3R2SteuerE</Name>
+                  <Beschriftung>R2 E-Ant</Beschriftung>
+                  <Spaltentyp>
+                    <TextfeldEinzeilig>
+                      <Min>2</Min>
+                      <Max>2</Max>
+                      <Format ID="Geldbetrag-Format"/>
+                    </TextfeldEinzeilig>
+                  </Spaltentyp>
+                  <TOZugriff ID="/vertrag/versicherter/PK_ZVK_99_381F"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.PunktesummeTO.punkteB3R2SteuerE"/>
+                  <Anzeige>true</Anzeige>
+                  <Ausrichtung>
+                    <Rechtsbuendig/>
+                  </Ausrichtung>
+                  <Sortierung>
+                    <OhneComparatorKlasse/>
+                  </Sortierung>
+                </Tabellenspalte>
+                <Tabellenspalte ID="RSKIBA/28.03.2018/12:33/215730">
+                  <Name>punkteB3R2SteuerV</Name>
+                  <Beschriftung>R2 V-Ant</Beschriftung>
+                  <Spaltentyp>
+                    <TextfeldEinzeilig>
+                      <Min>2</Min>
+                      <Max>2</Max>
+                      <Format ID="Geldbetrag-Format"/>
+                    </TextfeldEinzeilig>
+                  </Spaltentyp>
+                  <TOZugriff ID="/vertrag/versicherter/PK_ZVK_99_381F"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.PunktesummeTO.punkteB3R2SteuerV"/>
+                  <Anzeige>true</Anzeige>
+                  <Ausrichtung>
+                    <Rechtsbuendig/>
+                  </Ausrichtung>
+                  <Sortierung>
+                    <OhneComparatorKlasse/>
+                  </Sortierung>
+                </Tabellenspalte>
+                <Tabellenspalte ID="RSKIBA/28.03.2018/12:34/215731">
+                  <Name>punkteB3R3SteuerE</Name>
+                  <Beschriftung>R3 E-Ant</Beschriftung>
+                  <Spaltentyp>
+                    <TextfeldEinzeilig>
+                      <Min>2</Min>
+                      <Max>2</Max>
+                      <Format ID="Geldbetrag-Format"/>
+                    </TextfeldEinzeilig>
+                  </Spaltentyp>
+                  <TOZugriff ID="/vertrag/versicherter/PK_ZVK_99_381F"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.PunktesummeTO.punkteB3R3SteuerE"/>
+                  <Anzeige>true</Anzeige>
+                  <Ausrichtung>
+                    <Rechtsbuendig/>
+                  </Ausrichtung>
+                  <Sortierung>
+                    <OhneComparatorKlasse/>
+                  </Sortierung>
+                </Tabellenspalte>
+                <Tabellenspalte ID="RSKIBA/28.03.2018/12:35/215732">
+                  <Name>punkteB3R3SteuerV</Name>
+                  <Beschriftung>R3 V-Ant</Beschriftung>
+                  <Spaltentyp>
+                    <TextfeldEinzeilig>
+                      <Min>2</Min>
+                      <Max>2</Max>
+                      <Format ID="Geldbetrag-Format"/>
+                    </TextfeldEinzeilig>
+                  </Spaltentyp>
+                  <TOZugriff ID="/vertrag/versicherter/PK_ZVK_99_381F"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.PunktesummeTO.punkteB3R3SteuerV"/>
+                  <Anzeige>true</Anzeige>
+                  <Ausrichtung>
+                    <Rechtsbuendig/>
+                  </Ausrichtung>
+                  <Sortierung>
+                    <OhneComparatorKlasse/>
+                  </Sortierung>
+                </Tabellenspalte>
+                <Tabellenspalte ID="RSKIBA/28.03.2018/12:35/215733">
+                  <Name>punkteB3R4SteuerE</Name>
+                  <Beschriftung>R4 E-Ant</Beschriftung>
+                  <Spaltentyp>
+                    <TextfeldEinzeilig>
+                      <Min>2</Min>
+                      <Max>2</Max>
+                      <Format ID="Geldbetrag-Format"/>
+                    </TextfeldEinzeilig>
+                  </Spaltentyp>
+                  <TOZugriff ID="/vertrag/versicherter/PK_ZVK_99_381F"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.PunktesummeTO.punkteB3R4SteuerE"/>
+                  <Anzeige>true</Anzeige>
+                  <Ausrichtung>
+                    <Rechtsbuendig/>
+                  </Ausrichtung>
+                  <Sortierung>
+                    <OhneComparatorKlasse/>
+                  </Sortierung>
+                </Tabellenspalte>
+                <Tabellenspalte ID="RSKIBA/28.03.2018/12:36/215734">
+                  <Name>punkteB3R4SteuerV</Name>
+                  <Beschriftung>R4 V-Ant</Beschriftung>
+                  <Spaltentyp>
+                    <TextfeldEinzeilig>
+                      <Min>2</Min>
+                      <Max>2</Max>
+                      <Format ID="Geldbetrag-Format"/>
+                    </TextfeldEinzeilig>
+                  </Spaltentyp>
+                  <TOZugriff ID="/vertrag/versicherter/PK_ZVK_99_381F"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.PunktesummeTO.punkteB3R4SteuerV"/>
+                  <Anzeige>true</Anzeige>
+                  <Ausrichtung>
+                    <Rechtsbuendig/>
+                  </Ausrichtung>
+                  <Sortierung>
+                    <OhneComparatorKlasse/>
+                  </Sortierung>
+                </Tabellenspalte>
+                <Tabellenspalte ID="RSKIBA/28.03.2018/12:37/215735">
+                  <Name>punkteGesamtVerwendet</Name>
+                  <Beschriftung>Gesamt</Beschriftung>
+                  <Spaltentyp>
+                    <TextfeldEinzeilig>
+                      <Min>2</Min>
+                      <Max>2</Max>
+                      <Format ID="Geldbetrag-Format"/>
+                    </TextfeldEinzeilig>
+                  </Spaltentyp>
+                  <TOZugriff ID="/vertrag/versicherter/PK_ZVK_99_381F"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.PunktesummeTO.punkteGesamtVerwendet"/>
+                  <Anzeige>true</Anzeige>
+                  <Ausrichtung>
+                    <Rechtsbuendig/>
+                  </Ausrichtung>
+                  <Sortierung>
+                    <OhneComparatorKlasse/>
+                  </Sortierung>
+                </Tabellenspalte>
+                <Tabellenspalte ID="RSKIBA/28.03.2018/12:38/215736">
+                  <Name>punkteKrkPflichtig</Name>
+                  <Beschriftung>Gesamt KV/PV/ZB pflichtig</Beschriftung>
+                  <Spaltentyp>
+                    <TextfeldEinzeilig>
+                      <Min>2</Min>
+                      <Max>2</Max>
+                      <Format ID="Geldbetrag-Format"/>
+                    </TextfeldEinzeilig>
+                  </Spaltentyp>
+                  <TOZugriff ID="/vertrag/versicherter/PK_ZVK_99_381F"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.zvk.vtg.PunktesummeTO.punkteKrkPflichtig"/>
+                  <Anzeige>true</Anzeige>
+                  <Ausrichtung>
+                    <Rechtsbuendig/>
+                  </Ausrichtung>
+                  <Sortierung>
+                    <OhneComparatorKlasse/>
+                  </Sortierung>
+                </Tabellenspalte>
+              </TabellenspalteList>
+              <Tabellensteuerung>
+                <Hoehe>100</Hoehe>
+                <Breite>200</Breite>
+              </Tabellensteuerung>
+            </Tabellengruppe>
+          </Gruppentyp>
+          <Umbruch>true</Umbruch>
+        </Gruppe>
+      </GruppeList>
+    </Karteikarte>
+  </KarteikarteList>
+  <Dokumentation>
+    <ErzeugtVon>rskiba</ErzeugtVon>
+    <Erzeugungsdatum>28.03.2018</Erzeugungsdatum>
+  </Dokumentation>
+</Dialogbaustein>

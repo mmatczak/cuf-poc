@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<Dialogbaustein ID="pjedrkow/17.04.2012/06:42/48155">
+  <Name>DBS_ZMV_00_001F_DSVZ</Name>
+  <TOAnwendung ID="pjedrkow/17.04.2012/06:42/48162"/>
+  <KarteikarteList>
+    <Karteikarte>
+      <Name>DBS_ZMV_00_001F_NEU</Name>
+      <Beschriftung>DBS_ZMV_00_001F_NEU</Beschriftung>
+      <GruppeList>
+        <Gruppe ID="pjedrkow/17.04.2012/06:42/48150">
+          <Name>zmvMeldungsDatensatzKontextinfo2</Name>
+          <Beschriftung>ZmvMeldungsDatensatzKontextinfo</Beschriftung>
+          <Gruppentyp>
+            <Tabellengruppe>
+              <TOZugriff ID="/zmvMeldungsDatensatzKontextinfo"/>
+              <TabellenspalteList>
+                <Tabellenspalte ID="pjedrkow/17.04.2012/06:42/48061">
+                  <Name>kommunikationsrichtung</Name>
+                  <Beschriftung>Melderichtung</Beschriftung>
+                  <Spaltentyp>
+                    <TextfeldEinzeilig>
+                    </TextfeldEinzeilig>
+                  </Spaltentyp>
+                  <TOZugriff ID="/zmvMeldungsdatensatz"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.plf.zmv.ZMVDSVZDatensatzTO.kommunikationsrichtung"/>
+                  <Anzeige>true</Anzeige>
+                  <Ausrichtung>
+                    <Linksbuendig/>
+                  </Ausrichtung>
+                </Tabellenspalte>
+                <Tabellenspalte ID="pjedrkow/17.04.2012/06:42/48064">
+                  <Name>verfahrensMerkmal</Name>
+                  <Beschriftung>Verfahrensmerkmal</Beschriftung>
+                  <Spaltentyp>
+                    <TextfeldEinzeilig>
+                    </TextfeldEinzeilig>
+                  </Spaltentyp>
+                  <TOZugriff ID="/zmvMeldungsdatensatz"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.plf.zmv.ZMVDSVZDatensatzTO.verfahrensMerkmal"/>
+                  <Anzeige>true</Anzeige>
+                  <Ausrichtung>
+                    <Linksbuendig/>
+                  </Ausrichtung>
+                </Tabellenspalte>
+                <Tabellenspalte ID="pjedrkow/17.04.2012/06:42/48067">
+                  <Name>meldevorgang</Name>
+                  <Beschriftung>Meldevorgang</Beschriftung>
+                  <Spaltentyp>
+                    <TextfeldEinzeilig>
+                    </TextfeldEinzeilig>
+                  </Spaltentyp>
+                  <TOZugriff ID="/zmvMeldungsdatensatz/zmvMeldung"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.plf.zmv.ZMVMeldungTO.meldevorgang"/>
+                  <Anzeige>true</Anzeige>
+                  <Ausrichtung>
+                    <Linksbuendig/>
+                  </Ausrichtung>
+                </Tabellenspalte>
+                <Tabellenspalte ID="pjedrkow/17.04.2012/06:42/48070">
+                  <Name>fehlerKnz</Name>
+                  <Beschriftung>Fehler Knz.</Beschriftung>
+                  <Spaltentyp>
+                    <TextfeldEinzeilig>
+                      <Format ID="Ganzzahlformat"/>
+                    </TextfeldEinzeilig>
+                  </Spaltentyp>
+                  <TOZugriff ID="/zmvMeldungsdatensatz"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.plf.zmv.ZMVDSVZDatensatzTO.fehlerKnz"/>
+                  <Anzeige>true</Anzeige>
+                  <Ausrichtung>
+                    <Rechtsbuendig/>
+                  </Ausrichtung>
+                </Tabellenspalte>
+                <Tabellenspalte ID="pjedrkow/17.04.2012/06:42/48073">
+                  <Name>erstellungsDatum</Name>
+                  <Beschriftung>Erstelldatum</Beschriftung>
+                  <Spaltentyp>
+                    <TextfeldEinzeilig>
+                      <Format ID="Datumsformat"/>
+                    </TextfeldEinzeilig>
+                  </Spaltentyp>
+                  <TOZugriff ID="/zmvMeldungsdatensatz"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.plf.zmv.ZMVDSVZDatensatzTO.erstellungsDatum"/>
+                  <Anzeige>true</Anzeige>
+                  <Ausrichtung>
+                    <Rechtsbuendig/>
+                  </Ausrichtung>
+                </Tabellenspalte>
+                <Tabellenspalte ID="pjedrkow/17.04.2012/06:42/48076">
+                  <Name>verarbeitungsDatum</Name>
+                  <Beschriftung>Verarb. Datum</Beschriftung>
+                  <Spaltentyp>
+                    <TextfeldEinzeilig>
+                      <Format ID="Datumsformat"/>
+                    </TextfeldEinzeilig>
+                  </Spaltentyp>
+                  <TOZugriff ID="/zmvMeldungsdatensatz/zmvMeldung"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.plf.zmv.ZMVMeldungTO.verarbeitungsDatum"/>
+                  <Anzeige>true</Anzeige>
+                  <Ausrichtung>
+                    <Rechtsbuendig/>
+                  </Ausrichtung>
+                </Tabellenspalte>
+                <Tabellenspalte ID="pjedrkow/17.04.2012/06:42/48079">
+                  <Name>status</Name>
+                  <Beschriftung>Status</Beschriftung>
+                  <Spaltentyp>
+                    <TextfeldEinzeilig>
+                    </TextfeldEinzeilig>
+                  </Spaltentyp>
+                  <TOZugriff ID="/zmvMeldungsdatensatz"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.plf.zmv.ZMVDSVZDatensatzTO.datensatzStatus"/>
+                  <Anzeige>true</Anzeige>
+                  <Ausrichtung>
+                    <Linksbuendig/>
+                  </Ausrichtung>
+                </Tabellenspalte>
+                <Tabellenspalte ID="pjedrkow/17.04.2012/06:42/48085">
+                  <Name>bbNrKrankenkasse</Name>
+                  <Beschriftung>BbNr. Krankenkasse</Beschriftung>
+                  <Spaltentyp>
+                    <TextfeldEinzeilig>
+                    </TextfeldEinzeilig>
+                  </Spaltentyp>
+                  <TOZugriff ID="/zmvMeldungsdatensatz"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.plf.zmv.ZMVDSVZDatensatzTO.bbNrKrankenkasse"/>
+                  <Anzeige>true</Anzeige>
+                  <Ausrichtung>
+                    <Linksbuendig/>
+                  </Ausrichtung>
+                </Tabellenspalte>
+                <Tabellenspalte ID="pjedrkow/17.04.2012/06:42/48088">
+                  <Name>nameAnzeige</Name>
+                  <Beschriftung>Name Krk.</Beschriftung>
+                  <Spaltentyp>
+                    <TextfeldEinzeilig>
+                    </TextfeldEinzeilig>
+                  </Spaltentyp>
+                  <TOZugriff ID="/zmvMeldungsdatensatz/krankenkasse"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.plf.par.KrankenkasseTO.nameAnzeige"/>
+                  <Anzeige>true</Anzeige>
+                  <Ausrichtung>
+                    <Linksbuendig/>
+                  </Ausrichtung>
+                </Tabellenspalte>
+                <Tabellenspalte ID="pjedrkow/17.04.2012/06:42/48091">
+                  <Name>versicherungsnummer</Name>
+                  <Beschriftung>Vers.-Nr.</Beschriftung>
+                  <Spaltentyp>
+                    <TextfeldEinzeilig>
+                    </TextfeldEinzeilig>
+                  </Spaltentyp>
+                  <TOZugriff ID="/zmvMeldungsdatensatz/leistungsfall/versorgungsverhaeltnis"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.plf.vtg.VersorgVerhaeltnisTO.versicherungsnummer"/>
+                  <Anzeige>true</Anzeige>
+                  <Ausrichtung>
+                    <Linksbuendig/>
+                  </Ausrichtung>
+                </Tabellenspalte>
+                <Tabellenspalte ID="pjedrkow/17.04.2012/06:42/48094">
+                  <Name>krankenversicherterNr</Name>
+                  <Beschriftung>KVNR</Beschriftung>
+                  <Spaltentyp>
+                    <TextfeldEinzeilig>
+                    </TextfeldEinzeilig>
+                  </Spaltentyp>
+                  <TOZugriff ID="/zmvMeldungsdatensatz"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.plf.zmv.ZMVDSVZDatensatzTO.krankenversicherterNr"/>
+                  <Anzeige>true</Anzeige>
+                  <Ausrichtung>
+                    <Linksbuendig/>
+                  </Ausrichtung>
+                </Tabellenspalte>
+                <Tabellenspalte ID="pjedrkow/17.04.2012/06:42/48097">
+                  <Name>aktenzeichenVerursacher</Name>
+                  <Beschriftung>AZ Verursacher</Beschriftung>
+                  <Spaltentyp>
+                    <TextfeldEinzeilig>
+                    </TextfeldEinzeilig>
+                  </Spaltentyp>
+                  <TOZugriff ID="/zmvMeldungsdatensatz"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.plf.zmv.ZMVDSVZDatensatzTO.aktenzeichenVerursacher"/>
+                  <Anzeige>true</Anzeige>
+                  <Ausrichtung>
+                    <Linksbuendig/>
+                  </Ausrichtung>
+                </Tabellenspalte>
+                <Tabellenspalte ID="pjedrkow/17.04.2012/06:42/48100">
+                  <Name>sozialversicherungsnummer</Name>
+                  <Beschriftung>VSNR</Beschriftung>
+                  <Spaltentyp>
+                    <TextfeldEinzeilig>
+                    </TextfeldEinzeilig>
+                  </Spaltentyp>
+                  <TOZugriff ID="/zmvMeldungsdatensatz"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.plf.zmv.ZMVDSVZDatensatzTO.vsnr"/>
+                  <Anzeige>true</Anzeige>
+                  <Ausrichtung>
+                    <Linksbuendig/>
+                  </Ausrichtung>
+                </Tabellenspalte>
+                <Tabellenspalte ID="pjedrkow/17.04.2012/06:42/48103">
+                  <Name>meldungGrund</Name>
+                  <Beschriftung>DBKZ Grund</Beschriftung>
+                  <Spaltentyp>
+                    <TextfeldEinzeilig>
+                    </TextfeldEinzeilig>
+                  </Spaltentyp>
+                  <TOZugriff ID="/zmvMeldungsdatensatz/dbkzDatenbaustein"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.plf.zmv.DBKZDatenbausteinTO.meldungGrund"/>
+                  <Anzeige>true</Anzeige>
+                  <Ausrichtung>
+                    <Linksbuendig/>
+                  </Ausrichtung>
+                </Tabellenspalte>
+                <Tabellenspalte ID="pjedrkow/17.04.2012/06:42/48106">
+                  <Name>stornoKnz</Name>
+                  <Beschriftung>Storno Knz.</Beschriftung>
+                  <Spaltentyp>
+                    <Checkbox>
+                    </Checkbox>
+                  </Spaltentyp>
+                  <TOZugriff ID="/zmvMeldungsdatensatz/dbkzDatenbaustein"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.plf.zmv.DBKZDatenbausteinTO.stornoKnz"/>
+                  <Anzeige>true</Anzeige>
+                  <Ausrichtung>
+                    <Mittig/>
+                  </Ausrichtung>
+                </Tabellenspalte>
+                <Tabellenspalte ID="pjedrkow/17.04.2012/06:42/48109">
+                  <Name>abguehrungBeginn</Name>
+                  <Beschriftung>Beginn Abführung</Beschriftung>
+                  <Spaltentyp>
+                    <TextfeldEinzeilig>
+                      <Format ID="Datumsformat"/>
+                    </TextfeldEinzeilig>
+                  </Spaltentyp>
+                  <TOZugriff ID="/zmvMeldungsdatensatz/dbkzDatenbaustein"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.plf.zmv.DBKZDatenbausteinTO.btgAbfuehrungBeginn"/>
+                  <Anzeige>true</Anzeige>
+                  <Ausrichtung>
+                    <Rechtsbuendig/>
+                  </Ausrichtung>
+                </Tabellenspalte>
+                <Tabellenspalte ID="pjedrkow/17.04.2012/06:42/48112">
+                  <Name>abfuehrungEnde</Name>
+                  <Beschriftung>Ende Abführung</Beschriftung>
+                  <Spaltentyp>
+                    <TextfeldEinzeilig>
+                      <Format ID="Datumsformat"/>
+                    </TextfeldEinzeilig>
+                  </Spaltentyp>
+                  <TOZugriff ID="/zmvMeldungsdatensatz/dbkzDatenbaustein"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.plf.zmv.DBKZDatenbausteinTO.btgAbfuehrungEnde"/>
+                  <Anzeige>true</Anzeige>
+                  <Ausrichtung>
+                    <Rechtsbuendig/>
+                  </Ausrichtung>
+                </Tabellenspalte>
+                <Tabellenspalte ID="pjedrkow/17.04.2012/06:42/48115">
+                  <Name>abfAenderung</Name>
+                  <Beschriftung>Änderung Abführung</Beschriftung>
+                  <Spaltentyp>
+                    <TextfeldEinzeilig>
+                      <Format ID="Datumsformat"/>
+                    </TextfeldEinzeilig>
+                  </Spaltentyp>
+                  <TOZugriff ID="/zmvMeldungsdatensatz/dbkzDatenbaustein"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.plf.zmv.DBKZDatenbausteinTO.abfAenderung"/>
+                  <Anzeige>true</Anzeige>
+                  <Ausrichtung>
+                    <Rechtsbuendig/>
+                  </Ausrichtung>
+                </Tabellenspalte>
+                <Tabellenspalte ID="pjedrkow/17.04.2012/06:42/48118">
+                  <Name>meldungGrunddbzk</Name>
+                  <Beschriftung>DBZK Grund</Beschriftung>
+                  <Spaltentyp>
+                    <TextfeldEinzeilig>
+                    </TextfeldEinzeilig>
+                  </Spaltentyp>
+                  <TOZugriff ID="/zmvMeldungsdatensatz/dbzkDatenbaustein"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.plf.zmv.DBZKDatenbausteinTO.meldungGrund"/>
+                  <Anzeige>true</Anzeige>
+                  <Ausrichtung>
+                    <Linksbuendig/>
+                  </Ausrichtung>
+                </Tabellenspalte>
+                <Tabellenspalte ID="pjedrkow/17.04.2012/06:42/48121">
+                  <Name>stornoKnzdbzk</Name>
+                  <Beschriftung>Storno Knz.</Beschriftung>
+                  <Spaltentyp>
+                    <Checkbox>
+                    </Checkbox>
+                  </Spaltentyp>
+                  <TOZugriff ID="/zmvMeldungsdatensatz/dbzkDatenbaustein"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.plf.zmv.DBZKDatenbausteinTO.stornoKnz"/>
+                  <Anzeige>true</Anzeige>
+                  <Ausrichtung>
+                    <Mittig/>
+                  </Ausrichtung>
+                </Tabellenspalte>
+                <Tabellenspalte ID="pjedrkow/17.04.2012/06:42/48124">
+                  <Name>versorgungsbezugBetrag</Name>
+                  <Beschriftung>Höhe VB</Beschriftung>
+                  <Spaltentyp>
+                    <TextfeldEinzeilig>
+                      <Format ID="Geldbetrag-Format"/>
+                    </TextfeldEinzeilig>
+                  </Spaltentyp>
+                  <TOZugriff ID="/zmvMeldungsdatensatz/dbzkDatenbaustein"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.plf.zmv.DBZKDatenbausteinTO.versorgungsbezugBetrag"/>
+                  <Anzeige>true</Anzeige>
+                  <Ausrichtung>
+                    <Rechtsbuendig/>
+                  </Ausrichtung>
+                </Tabellenspalte>
+                <Tabellenspalte ID="pjedrkow/17.04.2012/06:42/48127">
+                  <Name>versorgungsbezugBeginn</Name>
+                  <Beschriftung>Beginn VB</Beschriftung>
+                  <Spaltentyp>
+                    <TextfeldEinzeilig>
+                      <Format ID="Datumsformat"/>
+                    </TextfeldEinzeilig>
+                  </Spaltentyp>
+                  <TOZugriff ID="/zmvMeldungsdatensatz/dbzkDatenbaustein"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.plf.zmv.DBZKDatenbausteinTO.versorgungsbezugBeginn"/>
+                  <Anzeige>true</Anzeige>
+                  <Ausrichtung>
+                    <Rechtsbuendig/>
+                  </Ausrichtung>
+                </Tabellenspalte>
+                <Tabellenspalte ID="pjedrkow/17.04.2012/06:42/48130">
+                  <Name>versorgungsbezugEnde</Name>
+                  <Beschriftung>Ende VB</Beschriftung>
+                  <Spaltentyp>
+                    <TextfeldEinzeilig>
+                      <Format ID="Datumsformat"/>
+                    </TextfeldEinzeilig>
+                  </Spaltentyp>
+                  <TOZugriff ID="/zmvMeldungsdatensatz/dbzkDatenbaustein"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.plf.zmv.DBZKDatenbausteinTO.versorgungsbezugEnde"/>
+                  <Anzeige>true</Anzeige>
+                  <Ausrichtung>
+                    <Rechtsbuendig/>
+                  </Ausrichtung>
+                </Tabellenspalte>
+                <Tabellenspalte ID="pjedrkow/17.04.2012/06:42/48133">
+                  <Name>versorgungsbezugAenderung</Name>
+                  <Beschriftung>Änderung VB</Beschriftung>
+                  <Spaltentyp>
+                    <TextfeldEinzeilig>
+                      <Format ID="Datumsformat"/>
+                    </TextfeldEinzeilig>
+                  </Spaltentyp>
+                  <TOZugriff ID="/zmvMeldungsdatensatz/dbzkDatenbaustein"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.plf.zmv.DBZKDatenbausteinTO.versorgungsbezugAenderung"/>
+                  <Anzeige>true</Anzeige>
+                  <Ausrichtung>
+                    <Rechtsbuendig/>
+                  </Ausrichtung>
+                </Tabellenspalte>
+                <Tabellenspalte ID="pjedrkow/17.04.2012/06:42/48136">
+                  <Name>beihilfeKnz</Name>
+                  <Beschriftung>Beihilfe Knz.</Beschriftung>
+                  <Spaltentyp>
+                    <Checkbox>
+                    </Checkbox>
+                  </Spaltentyp>
+                  <TOZugriff ID="/zmvMeldungsdatensatz/dbzkDatenbaustein"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.plf.zmv.DBZKDatenbausteinTO.beihilfeKnz"/>
+                  <Anzeige>true</Anzeige>
+                  <Ausrichtung>
+                    <Mittig/>
+                  </Ausrichtung>
+                </Tabellenspalte>
+                <Tabellenspalte ID="pjedrkow/17.04.2012/06:42/48139">
+                  <Name>beitragKv</Name>
+                  <Beschriftung>KV-Beitrag</Beschriftung>
+                  <Spaltentyp>
+                    <TextfeldEinzeilig>
+                      <Format ID="Geldbetrag-Format"/>
+                    </TextfeldEinzeilig>
+                  </Spaltentyp>
+                  <TOZugriff ID="/zmvMeldungsdatensatz/dbzkDatenbaustein"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.plf.zmv.DBZKDatenbausteinTO.beitragKv"/>
+                  <Anzeige>true</Anzeige>
+                  <Ausrichtung>
+                    <Rechtsbuendig/>
+                  </Ausrichtung>
+                </Tabellenspalte>
+                <Tabellenspalte ID="pjedrkow/17.04.2012/06:42/48142">
+                  <Name>beitragPv</Name>
+                  <Beschriftung>PV-Beitrag</Beschriftung>
+                  <Spaltentyp>
+                    <TextfeldEinzeilig>
+                      <Format ID="Geldbetrag-Format"/>
+                    </TextfeldEinzeilig>
+                  </Spaltentyp>
+                  <TOZugriff ID="/zmvMeldungsdatensatz/dbzkDatenbaustein"/>
+                  <Attribut ID="ch.forumedia.futura.commongen.to.plf.zmv.DBZKDatenbausteinTO.beitragPv"/>
+                  <Anzeige>true</Anzeige>
+                  <Ausrichtung>
+                    <Rechtsbuendig/>
+                  </Ausrichtung>
+                </Tabellenspalte>
+                <Tabellenspalte ID="pjedrkow/17.04.2012/06:42/48145">
+                  <Name>summeKvPv</Name>
+                  <Beschriftung>Summe KV-PV</Beschriftung>
+                  <Spaltentyp>
+                    <TextfeldEinzeilig>
+                    </TextfeldEinzeilig>
+                  </Spaltentyp>
+                  <TOZugriff ID="/zmvMeldungsdatensatz/dbzkDatenbaustein"/>
+                  <Attribut ID="summeKvPv"/>
+                  <Anzeige>true</Anzeige>
+                  <Ausrichtung>
+                    <Linksbuendig/>
+                  </Ausrichtung>
+                </Tabellenspalte>
+              </TabellenspalteList>
+              <Tabellensteuerung>
+                <Hoehe>100</Hoehe>
+                <Breite>200</Breite>
+              </Tabellensteuerung>
+              <BenutzeraktionList>
+                <Benutzeraktion>
+                  <Name>ansehen</Name>
+                  <Beschriftung>Ansehen...</Beschriftung>
+                  <Javaklasse>ch.forumedia.futura.client.plf.zmv.DSVZDatensatzKontextUserDefinedAction</Javaklasse>
+                  <Vorbedingung>
+                    <KeineVorbedingung/>
+                  </Vorbedingung>
+                </Benutzeraktion>
+              </BenutzeraktionList>
+            </Tabellengruppe>
+          </Gruppentyp>
+          <Umbruch>true</Umbruch>
+        </Gruppe>
+      </GruppeList>
+    </Karteikarte>
+  </KarteikarteList>
+  <Dokumentation>
+  </Dokumentation>
+</Dialogbaustein>
